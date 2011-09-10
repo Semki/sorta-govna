@@ -1,0 +1,27 @@
+h1 {
+	color: #2A302D;
+	font-family: TeXGyre, Georgia, serif;
+	line-height: 1em;
+	margin: 20px;
+	text-shadow: 1px 1px 1px gray;
+	text-transform: none;
+	font-size: 25pt;
+}
+
+form {
+	margin-top: 50px;
+}
+
+#whatIsShit {
+	font-size: 18pt;
+	color: brown;
+}
+
+#submitShit {
+	font-size: 18pt;
+	color: black;
+}
+
+#contentDiv {
+	margin-top: 150px;
+}
