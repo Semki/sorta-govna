@@ -1,4 +1,11 @@
 GovnoRf::Application.routes.draw do
+  
+  root :to => "main#index"  
+
+  resources :shits
+  
+  match '/shit' => 'main#shit'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
