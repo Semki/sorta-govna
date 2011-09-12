@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(:version => 20110912081025) do
 
   create_table "shits", :force => true do |t|
-    t.string  "name"
-    t.integer "total", :default => 0
+    t.string   "name"
+    t.integer  "total",      :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
