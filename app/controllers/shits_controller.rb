@@ -1,4 +1,5 @@
 class ShitsController < ApplicationController
+	
   # GET /shits
   # GET /shits.xml
   def index

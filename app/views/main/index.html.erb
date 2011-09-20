@@ -1,4 +1,4 @@
-<div id="contentDiv" align="center">
+<div id="contentDiv" align="center"
 	<h1>Говно.рф</h1>
         <%= form_tag '/shit' %>
 		<input type="text" id="whatIsShit" value="Intersystems Cache'" />
@@ -9,7 +9,12 @@
 		<div>
 		<h1>Баттхёрт недели</h1>
 		
-		</div>
+	</div>
+	<div align="right">
+		
+	<%= link_to 'Топ лист', :controller => "main", :action => "topshit" %>
+	</div>
+
 	</form>
 </div>
 

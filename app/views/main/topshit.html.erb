@@ -1,0 +1,23 @@
+<h1>Listing top of shits</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @topshit.each do |shit| %>
+  
+  <tr cols='3'>
+      <th><%= shit.name %></th>
+      <th><%= shit.total %></th>
+  </tr>
+
+ 
+<% end %>
+</table>
+
+<br />
+
+
