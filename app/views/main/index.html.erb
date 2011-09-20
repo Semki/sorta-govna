@@ -1,20 +1,9 @@
-<div id="contentDiv" align="center">
-	<h1>Говно.рф</h1>
-        <%= form_tag '/shit' %>
+
+  	<h1>Говно.рф</h1>
+    <%= form_tag '/shit' do %>
 		<input type="text" id="whatIsShit" value="Intersystems Cache'" />
 		<%= submit_tag "Говно" =%>
-		</br height="150px">
-		
-		<input type="button" value="Сравнить два говна" />
-		<div>
-		<h1>Баттхёрт недели</h1>
-		
-	</div>
-	<div align="right">
-		
-	<%= link_to 'Топ лист', :controller => "main", :action => "topshit" %>
-	</div>
 
-	</form>
-</div>
+	  <% end %>
+
 

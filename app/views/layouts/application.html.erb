@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="contentDiv" align="center">
+    <ul id="main_actions">
+      <li><%= link_to 'Сравнить 2 говна' %></li> 
+      <li><%= link_to 'Баттхерт недели' %></li>
+      <li><%= link_to 'Топ лист', :controller => "main", :action => "topshit" %></li>
+    </ul>
+    <br />
 <%= yield %>
+</div>
 
 </body>
 </html>

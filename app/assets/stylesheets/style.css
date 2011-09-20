@@ -12,9 +12,13 @@ form {
 	margin-top: 50px;
 }
 
+ul#main_actions {list-style-type:none; width: 100%;  }
+ul#main_actions li {float: left; margin-left: 20px;}
+
 #whatIsShit {
 	font-size: 18pt;
 	color: brown;
+  margin-top:100px;
 }
 
 #submitShit {
@@ -23,5 +27,5 @@ form {
 }
 
 #contentDiv {
-	margin-top: 150px;
+	margin-top: 10px;
 }
