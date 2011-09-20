@@ -4,11 +4,11 @@ class MainController < ApplicationController
 
   # top list of sheet
   def topshit
-	@topshit = Shit.order("total desc").limit(10)
-	respond_to do |format|
-		format.html # index.html.erb
-		format.xml  { render :xml => @topshit }
-	end
+    @topshit = Shit.order("total desc").limit(10)
+    respond_to do |format|
+  		format.html # index.html.erb
+  		format.xml  { render :xml => @topshit }
+    end
   end
 	
  
