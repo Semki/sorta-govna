@@ -1,15 +1,13 @@
-<h1>Listing top of shits</h1>
+<h1>10 самых говенных говн:</h1>
 
-<table>
+<table width="50%" border="solid" >
   <tr>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Название</th>
+    <th>Счетчик</th>
   </tr>
-
 <% @topshit.each do |shit| %>
-  
-  <tr cols='3'>
+ 
+  <tr cols='2'>
       <th><%= shit.name %></th>
       <th><%= shit.total %></th>
   </tr>
