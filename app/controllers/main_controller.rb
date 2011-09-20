@@ -13,10 +13,20 @@ class MainController < ApplicationController
 	
  
   def shit
-    @shit = Shit.where(:name=>params[:name]).first
-#    if @shit.nil? then  @shit = Shit.new end 
-    @shit = Shit.new
-    @shit.total = @shit.total + 1
+    name = params[:name].mb_chars.upcase.strip
+    name = params[:name].mb_chars.upcase.strip
+    if name!=''
+      @shit = Shit.find_by_name(name)
+      if @shit.nil?
+        @shit = Shit.new do |s|
+          s.name = name
+          s.total = 0
+        end
+      end
+      @shit.total = @shit.total + 1
+      @shit.save
+    end
     redirect_to :action => 'index'
   end
+
 end

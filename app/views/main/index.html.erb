@@ -1,6 +1,6 @@
   	<h1>Сортаговна.ру</h1>
     <%= form_tag '/shit' do %>
-		<input type="text" id="whatIsShit" value="Intersystems Cache'" />
+        <%= text_field_tag('name',"Intersystems Cache'")  =%>
 		<%= submit_tag "Говно" =%>
 
 	  <% end %>

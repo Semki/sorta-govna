@@ -10,7 +10,7 @@
 <% @topshit.each do |shit| %>
   
   <tr cols='3'>
-      <th><%= shit.name %></th>
+      <th><%= shit.name.mb_chars.capitalize %></th>
       <th><%= shit.total %></th>
   </tr>
 
