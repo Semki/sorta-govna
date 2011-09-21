@@ -12,6 +12,8 @@ form {
 	margin-top: 50px;
 }
 
+a#logo_link {color: #69431E; text-decoration: none; font-size: 2em;}
+
 ul#main_actions {list-style-type:none; width: 100%;  }
 ul#main_actions li {float: left; margin-left: 20px;}
 
