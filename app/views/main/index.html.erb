@@ -1,6 +1,10 @@
     <%= form_tag '/shit' do %>
-        <%= text_field_tag('name',"Батька атаман")  =%>
+        <%= text_field_tag('name', flash[:last_shit])  =%>
 		<%= submit_tag "Говно" =%>
+    
+    <% if !flash[:last_shit].nil?%>
+    <h1><%= flash[:last_shit] + " - официально заговнено!" %></h1>
+    <% end %>
 
 	  <% end %>
 

@@ -13,9 +13,10 @@ class MainController < ApplicationController
 	
  
   def shit
-    name = params[:name].mb_chars.upcase.strip
-    name = params[:name].mb_chars.upcase.strip
-    if name!=''
+    name = params[:name]
+    if name != ''
+      flash[:last_shit] = name
+      name_upcase = name.mb_chars.upcase.strip
       @shit = Shit.find_by_name(name)
       if @shit.nil?
         @shit = Shit.new do |s|
