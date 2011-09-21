@@ -17,15 +17,16 @@ a#logo_link {color: #69431E; text-decoration: none; font-size: 2em;}
 ul#main_actions {list-style-type:none; width: 100%;  }
 ul#main_actions li {float: left; margin-left: 20px;}
 
-#whatIsShit {
-	font-size: 18pt;
-	color: brown;
-  margin-top:100px;
+.whatIsShit {
+	font-family: TeXGyre, Georgia, serif;
+  font-size: 20pt;
+  width: 300px;
 }
 
-#submitShit {
-	font-size: 18pt;
-	color: black;
+.submitShit {
+	font-family: TeXGyre, Georgia, serif;
+  font-size: 20pt;
+  padding: 2px 10px 2px 10px;
 }
 
 #contentDiv {
