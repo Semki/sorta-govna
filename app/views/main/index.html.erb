@@ -1,11 +1,18 @@
+    <% last_shit = flash[:last_shit] %>
+        <% if !last_shit.nil? %>
+        <%	 last_shit_name = last_shit.name.capitalize %>
+        <% else %>
+        <%  last_shit_name = "Intersystems Cache'" %>
+        <% end %>
     <%= form_tag '/shit' do %>
-        <%= text_field_tag('name', flash[:last_shit], :class => "whatIsShit")  =%>
-		<%= submit_tag "Говно", :class => "submitShit" =%>
-    
-    <% if !flash[:last_shit].nil?%>
+        <%= text_field_tag('name', last_shit_name, :class => "whatIsShit") %>
+		<%= submit_tag "Говно", :class => "submitShit" %>
+
+
+    <% if !last_shit.nil? %>
     <h1>
-      <%= flash[:last_shit]+" - официально заговнено " %>
-      <%= flash[:last_shit_count].to_s() +" раз!" %>
+      <%= link_to last_shit_name, last_shit %>
+      <%= " - официально заговнено " + last_shit.total.to_s() +" раз!" %>
     </h1>
     <% end %>
 
