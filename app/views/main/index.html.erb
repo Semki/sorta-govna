@@ -3,7 +3,10 @@
 		<%= submit_tag "Говно", :class => "submitShit" =%>
     
     <% if !flash[:last_shit].nil?%>
-    <h1><%= flash[:last_shit] + " - официально заговнено!" %></h1>
+    <h1>
+      <%= flash[:last_shit]+" - официально заговнено " %>
+      <%= flash[:last_shit_count].to_s() +" раз!" %>
+    </h1>
     <% end %>
 
 	  <% end %>

@@ -26,6 +26,7 @@ class MainController < ApplicationController
       end
       @shit.total = @shit.total + 1
       @shit.save
+      flash[:last_shit_count] = @shit.total
     end
     redirect_to :action => 'index'
   end
