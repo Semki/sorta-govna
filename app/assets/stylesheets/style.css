@@ -32,3 +32,11 @@ ul#main_actions li {float: left; margin-left: 20px;}
 #contentDiv {
 	margin-top: 10px;
 }
+
+.descriptionDiv {
+  margin-left: auto;
+  margin-right: auto;
+  width: 800px;
+  padding: 20px;
+  background-color: #AD686D;
+}
