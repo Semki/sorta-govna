@@ -1,7 +1,7 @@
 class Shit < ActiveRecord::Base
   
   def self.shit_by_name(name)
-    if name != ''    
+    if !name.blank?    
       name_to_store = name.mb_chars.upcase.strip
       shit = self.find_or_initialize_by_name(name_to_store)
       shit.vote
@@ -13,7 +13,7 @@ class Shit < ActiveRecord::Base
   end
   
   def self.shit_by_id(id)
-    if id != ''
+    if !id.blank?
       shit = self.find(id)
       shit.vote
     end
