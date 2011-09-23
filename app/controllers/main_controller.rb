@@ -13,18 +13,12 @@ class MainController < ApplicationController
 	
  
   def shit
-    name = params[:name]
-    if (name != '')
-      flash[:last_shit] = Shit.shit_by_name(name)
-    end
+    flash[:last_shit] = Shit.shit_by_name(params[:name])      
     redirect_to :action => 'index'
   end
   
   def shit_by_id
-    id = params[:id]
-    if (id != '')
-      flash[:last_shit] = Shit.shit_by_id(id)
-    end
+    flash[:last_shit] = Shit.shit_by_id(params[:id])      
     redirect_to :action => 'index'
   end
   
