@@ -4,14 +4,14 @@
   <tr>
     <th>Название</th>
     <th>Счетчик</th>
-    <th></th>
+    <th>Заговнить еще!</th>
   </tr>
 <% @topshit.each do |shit| %>
  
   <tr cols='2'>
       <th><%= shit.name.mb_chars.capitalize %></th>
       <th><%= shit.total %></th>
-      <th><%= link_to 'Заговнить ещё больше', :controller => "main", :action => "shit", :name => shit.name %></th>
+      <th><%= link_to image_tag("turd.jpg", :border=>0), :controller => "main", :action => 'shit_by_id', :id => shit.id %></th>
   </tr>
 
  

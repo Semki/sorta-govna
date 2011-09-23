@@ -14,21 +14,19 @@ class MainController < ApplicationController
  
   def shit
     name = params[:name]
-    if name != ''
-      flash[:last_shit] = name
-      name_upcase = name.mb_chars.upcase.strip
-      @shit = Shit.find_by_name(name_upcase)
-      if @shit.nil?
-        @shit = Shit.new do |s|
-          s.name = name_upcase
-          s.total = 0
-        end
-      end
-      @shit.total = @shit.total + 1
-      @shit.save
-      flash[:last_shit] = @shit
+    if (name != '')
+      flash[:last_shit] = Shit.shit_by_name(name)
     end
     redirect_to :action => 'index'
   end
+  
+  def shit_by_id
+    id = params[:id]
+    if (id != '')
+      flash[:last_shit] = Shit.shit_by_id(id)
+    end
+    redirect_to :action => 'index'
+  end
+  
 
 end

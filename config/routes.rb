@@ -7,6 +7,8 @@ GovnoRf::Application.routes.draw do
   match '/shit' => 'main#shit'
 
   match "/topshit" => "main#topshit"
+  
+  match "/shit_by_id" => "main#shit_by_id"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
