@@ -13,13 +13,17 @@ class MainController < ApplicationController
 	
  
   def shit
-    flash[:last_shit] = Shit.shit_by_name(params[:name])      
+    save_last_shit(Shit.shit_by_name(params[:name]))    
     redirect_to :action => 'index'
   end
   
   def shit_by_id
-    flash[:last_shit] = Shit.shit_by_id(params[:id])      
+    save_last_shit(Shit.shit_by_id(params[:id]))    
     redirect_to :action => 'index'
+  end
+  
+  def save_last_shit(last_shit)
+    flash[:last_shit] = last_shit
   end
   
 
