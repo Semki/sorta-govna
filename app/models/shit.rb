@@ -14,6 +14,10 @@ class Shit < ActiveRecord::Base
     end
   end
   
+  def capitalized_name
+    self.name.mb_chars.capitalize
+  end
+  
   def self.shit_by_id(id)
     if id != ''
       shit = self.find(id)

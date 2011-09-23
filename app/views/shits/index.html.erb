@@ -1,6 +1,6 @@
 <h1>Listing shits</h1>
 
-<table>
+<table width="100%">
   <tr>
     <th></th>
     <th></th>
@@ -15,6 +15,7 @@
 
  <tr>
     <td><%= link_to 'Show', shit %></td>
+    <td><%= shit.description.to_s.truncate(70) %>
     <td><%= link_to 'Edit', edit_shit_path(shit) %></td>
     <td><%= link_to 'Destroy', shit, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>

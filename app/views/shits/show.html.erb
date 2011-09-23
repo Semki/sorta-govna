@@ -1,8 +1,18 @@
 <p id="notice"><%= notice %></p>
-<h1><%= @shit.name %> - официально говно <%= @shit.total %> раз!</h1>
+<h1><%= @shit.capitalized_name %></h1>
+<h2>Говно <%= @shit.total.to_s %> раз!</h2>
 <div class="descriptionDiv">
-  <p><%= @shit.description %></p>
+  <p>
+  <% if @shit.description.nil? %>
+  <%= @shit.capitalized_name + " - настолько говно, что про него даже всем лень написать"%>
+  <% else %>
+  <%= @shit.description %>
+  <% end %>
+  </p>
 </div>
+<br />
+  Описание - говно?
+  <%= link_to "Отредактируй!", edit_shit_path(@shit)%>
 <br />
 <%= link_to 'Edit', edit_shit_path(@shit) %> |
 <%= link_to 'Back', shits_path %>

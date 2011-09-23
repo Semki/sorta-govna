@@ -40,3 +40,7 @@ ul#main_actions li {float: left; margin-left: 20px;}
   padding: 20px;
   background-color: #AD686D;
 }
+
+.descriptionTextField {
+  height: 100px;
+}
