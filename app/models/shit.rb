@@ -1,5 +1,7 @@
 class Shit < ActiveRecord::Base
   
+  scope :topshit, lambda{|top| order("total desc").limit(top)}
+  
   def self.shit_by_name(name)
     self.find_or_initialize_by_name(name.mb_chars.upcase.strip).vote unless name.blank?      
   end
