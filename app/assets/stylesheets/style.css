@@ -1,3 +1,98 @@
+body {
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -1px;
+  width: 791px;
+}
+
+div {
+  display: block;
+}
+
+ul.horizontal {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#mainDiv #shitItDiv {
+  width: 415px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navigationDiv .navigation li {
+  padding-left: 25px;
+  font-size: 14px;
+  color: #BBB;
+}
+
+ul.horizontal li {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+#mainDiv {
+  padding-top: 15px;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo {
+  font-weight:bold;
+  color: white;
+}
+
+#navigationDiv {
+  position: relative;
+  padding: 8px 8px 13px 0px;
+  border-top: solid 1px white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFCC00), to(#996633));
+  background: -moz-linear-gradient(top, #FFCC00, #996633);
+  border-bottom: solid 3px #DE9F00;
+  margin-bottom: 15px;
+  -webkit-border-bottom-right-radius: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -moz-border-radius-bottomleft: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+#navigationDiv .navigation {
+  float: left;
+  padding-top: 2px;
+}
+
+#navigationDiv .navigation li a {
+  color: white;
+  text-decoration: none;
+}
+
+#navigationFiller {
+  height: 15px;
+  width: 0px;
+}
+
+a:-webkit-any-link {
+color: -webkit-link;
+text-decoration: underline;
+cursor: auto;
+}
+
+#footerDiv {
+  clear: both;
+  font-size: 11px;
+  text-align: center;
+  padding: 25px 0;
+  color: #555;
+}
+
+
 h1 {
 	color: #2A302D;
 	font-family: TeXGyre, Georgia, serif;
@@ -12,10 +107,7 @@ form {
 	margin-top: 50px;
 }
 
-a#logo_link {color: #69431E; text-decoration: none; font-size: 2em;}
 
-ul#main_actions {list-style-type:none; width: 100%;  }
-ul#main_actions li {float: left; margin-left: 20px;}
 
 .whatIsShit {
 	font-family: TeXGyre, Georgia, serif;

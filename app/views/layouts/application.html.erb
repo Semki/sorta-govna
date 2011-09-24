@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GovnoRf</title>
+  <title>Сорта говна</title>
   <%= stylesheet_link_tag    "style" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="contentDiv" align="center">
-    <%= link_to 'Сортаговна.ру', root_url, :id=> 'logo_link' %>
-    <div id='slogan'>В сортах говна разбираемся!</div>
-    <ul id="main_actions">
+  <div id="navigationDiv">
+    &nbsp
+    <ul class="navigation horizontal">
+      <li><%= link_to 'Сортаговна.ру', root_url, :id => 'logo' %></li>
+      <li><span id="logo">|</span></li>
       <li><%= link_to 'Сравнение говн' %></li> 
       <li><%= link_to 'Бурление недели' %></li>
       <li><%= link_to 'Топ лист', :controller => "main", :action => "topshit" %></li>
     </ul>
-    <br />
-<%= yield %>
-</div>
-
+  </div>  
+  <div id="mainDiv">
+    <%= yield %>
+  </div>
+  <div id="footerDiv">
+    &copy; Semki ltd.
+  </div>
 </body>
 </html>
