@@ -11,6 +11,10 @@ div {
   display: block;
 }
 
+.notice {
+  color: green;
+}
+
 ul.horizontal {
   list-style: none;
   margin: 0;

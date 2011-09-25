@@ -4,7 +4,7 @@ GovnoRf::Application.routes.draw do
 
   resources :shits
   
-  match '/shit' => 'main#shit'
+  match '/shit' => 'main#shit', :as => :shit_it
 
   match "/topshit" => "main#topshit"
   

@@ -13,18 +13,19 @@ class MainController < ApplicationController
 	
  
   def shit
-    save_last_shit(Shit.shit_by_name(params[:name]))    
-    redirect_to :action => 'index'
+    make_notice_about_shitting(Shit.shit_by_name(params[:name]))
+    respond_to do |format|
+      format.html { redirect_to :action => 'index' }
+      format.js
+    end
   end
   
   def shit_by_id
-    save_last_shit(Shit.shit_by_id(params[:id]))    
+    make_notice_about_shitting(Shit.shit_by_id(params[:id]))
     redirect_to :action => 'index'
   end
   
-  def save_last_shit(last_shit)
-    flash[:last_shit] = last_shit
+  def make_notice_about_shitting(shit)
+    flash[:notice] = shit.capitalized_name + " - officially shit " + shit.total.to_s + " times!" unless shit.nil?
   end
-  
-
 end

@@ -1,22 +1,9 @@
 <div id="shitItDiv">
-<% last_shit = flash[:last_shit] %>
-        <% if !last_shit.nil? %>
-        <%	 last_shit_name = last_shit.name.capitalize %>
-        <% else %>
-        <%  last_shit_name = "Intersystems Cache'" %>
-        <% end %>
-    <%= form_tag '/shit' do %>
-        <%= text_field_tag('name', last_shit_name, :class => "whatIsShit") %>
-		<%= submit_tag "Говно", :class => "submitShit" %>
-
-
-    <% if !last_shit.nil? %>
-    <h1>
-      <%= link_to last_shit_name, last_shit %>
-      <%= " - официально заговнено " + last_shit.total.to_s() +" раз!" %>
-    </h1>
-    <% end %>
-
-	  <% end %>
-  </div>
+  <%= form_tag :action => "shit", :remote => true do %>
+    <%= text_field_tag('name', '', :class => "whatIsShit") %>
+		<%= submit_tag "Говно", :action => "shit", :class => 'submitShit', :remote => true %>
+  <% end %> 
+  <br /> 
+  <p class="notice"><%= flash[:notice] %></p>
+</div>
 
