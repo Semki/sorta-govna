@@ -2,6 +2,15 @@ class Shit < ActiveRecord::Base
   
   scope :topshit, lambda{|top| order("total desc").limit(top)}
   
+  def self.with_names(names)
+    shits = Array.new
+    names.each do |name|
+      shit = find_or_initialize_by_name(name.mb_chars.upcase.strip)
+      shits << shit unless shit.nil?
+    end
+    shits
+  end
+  
   def self.shit_by_name(name)
     self.find_or_initialize_by_name(name.mb_chars.upcase.strip).vote unless name.blank?      
   end
@@ -19,4 +28,6 @@ class Shit < ActiveRecord::Base
     self.save
     self
   end
+  
+  
 end

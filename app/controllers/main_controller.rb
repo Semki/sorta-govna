@@ -28,4 +28,12 @@ class MainController < ApplicationController
   def make_notice_about_shitting(shit)
     flash[:notice] = shit.capitalized_name + " - officially shit " + shit.total.to_s + " times!" unless shit.nil?
   end
+  
+  def compare
+    if params[:name]
+      @sorted_shits = Shit.with_names(params[:name].values).sort_by{|s| s.total}.reverse
+      @do_compare = true
+    end
+  end
+  
 end

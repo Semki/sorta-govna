@@ -1,0 +1,16 @@
+<%= if @do_compare==true
+		render 'compare_result' 
+	end
+%>
+
+<div id="shitItDiv">
+  <%= form_tag :action => "compare" do %>
+    <%= text_field_tag('name[0]', '', :class => "whatIsShit") %>
+	<%= text_field_tag('name[1]', '', :class => "whatIsShit") %>
+	<br />
+	<%= submit_tag "Сравнить", :action => "compare", :class => 'submitShit' %>
+  <% end %> 
+  <br /> 
+  <p class="notice"><%= flash[:notice] %></p>
+</div>
+
