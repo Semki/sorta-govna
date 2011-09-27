@@ -1,24 +1,19 @@
 class MainController < ApplicationController
+  respond_to :html, :js
+  
   def index
   end
 
   # top list of sheet
   def topshit
-    @topshits = Shit.topshit(10)
-    respond_to do |format|
-  		format.html # index.html.erb
-  		format.xml  { render :xml => @topshits }
-    end
+    @topshits = Shit.topshit(10)        
   end
 	
  
-  def shit
-    make_notice_about_shitting(Shit.shit_by_name(params[:name]))
-    respond_to do |format|
-      format.html { redirect_to :action => 'index' }
-      format.js
-    end
-  end
+  def shit_it
+    make_notice_about_shitting(Shit.shit_by_name(params[:name]))    
+    respond_with("shit_it")
+  end    
   
   def shit_by_id
     make_notice_about_shitting(Shit.shit_by_id(params[:id]))

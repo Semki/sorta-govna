@@ -1,7 +1,7 @@
 <div id="shitItDiv">
-  <%= form_tag :action => "shit", :remote => true do %>
+<%= form_tag({:action => :shit_it}, :remote => true) do %>
     <%= text_field_tag('name', '', :class => "whatIsShit") %>
-		<%= submit_tag "Говно", :action => "shit", :class => 'submitShit', :remote => true %>
+		<%= submit_tag "Говно", :class => 'submitShit' %>
   <% end %> 
   <br /> 
   <p class="notice"><%= flash[:notice] %></p>

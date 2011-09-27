@@ -1,0 +1,5 @@
+$('.notice').hide()
+$('.notice').html("<%= escape_javascript(flash[:notice]) %>");
+$('.notice').fadeIn('fast', function() {
+    // Animation complete.
+  });
