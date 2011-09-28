@@ -1,5 +1,6 @@
 class MainController < ApplicationController
   respond_to :html, :js
+  autocomplete :shit, :name
   
   def index
   end
