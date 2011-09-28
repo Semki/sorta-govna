@@ -1,17 +1,17 @@
 ﻿<h1><%= t(:top_10_shits)%></h1>
 
-<table width="50%" border="solid" >
+<table class="top_table">
   <tr>
     <th><%= t(:name) %></th>
     <th><%= t(:total) %></th>
-    <th><%= t(:shit_it_more) %></th>
+    <th class="shit_it_cell"><%= t(:shit_it_more) %></th>
   </tr>
 <% @topshits.each do |shit| %>
  
   <tr cols='2'>
-      <th><%= shit.name.mb_chars.capitalize %></th>
-      <th><%= shit.total %></th>
-      <th><%= link_to image_tag("turd.jpg", :border=>0), :controller => "main", :action => 'shit_by_id', :remote => true, :id => shit.id %></th>
+      <td><%= shit.name.mb_chars.capitalize %></td>
+      <td><%= shit.total %></td>
+      <td class="shit_it_cell"><%= link_to image_tag("turd.jpg", :border=>0), :controller => "main", :action => 'shit_by_id', :remote => true, :id => shit.id %></td>
   </tr>
 
  
