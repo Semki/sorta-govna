@@ -2,4 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  sortagovna_ru: "Sortagovna.ru"
   hello: "Hello world"
+  shit: "Shit"
+  compare_shits: "Compare shits"
+  toplist: "Top list"
+  week_rating: "Week rating"
+  compare: "Compare"
+  top_10_shits: "Top 10 most shitty shits"
+  name: "Name"
+  total: "Total"
+  shit_it_more: "Shit it more!"
+  officially_shit: "%{name} — officially shit %{count} times"
+  

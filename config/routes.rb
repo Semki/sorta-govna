@@ -1,18 +1,23 @@
 GovnoRf::Application.routes.draw do
   
-  root :to => "main#index"  
+   
+
+    
+  root :to => "main#index" 
 
   resources :shits
-  
+
   match 'shit_it' => 'main#shit_it', :as => 'shit_it'
 
   match "/topshit" => "main#topshit"
-  
+
   match "/shit_by_id" => "main#shit_by_id"
-  
+
   match "/compare" => "main#compare", :as => :compare
-  
-  get 'main/autocomplete_shit_name'
+
+  get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'
+
+ 
   
   #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
   # The priority is based upon order of creation:

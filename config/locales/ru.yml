@@ -1,0 +1,13 @@
+ru:
+  sortagovna_ru: "Сортаговна.ру"
+  hello: "Привет!"
+  shit: "Говно"
+  compare_shits: "Сравнение говн"
+  toplist: "Топ лист"
+  week_rating: "Бурление недели"
+  compare: "Сравнить"
+  top_10_shits: "10 самых говенных говн"
+  name: "Название"
+  total: "Счетчик"
+  shit_it_more: "Заговнить еще!"
+  officially_shit: "%{name} — официальное говно %{count} раз"

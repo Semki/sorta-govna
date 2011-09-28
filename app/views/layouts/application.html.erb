@@ -10,14 +10,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id='lang'><%= switch_language_link%></div>
   <div id="navigationDiv">
     &nbsp
     <ul class="navigation horizontal">
-      <li><%= link_to 'Сортаговна.ру', root_url, :id => 'logo' %></li>
+      <li><%= link_to t(:sortagovna_ru), root_url, :id => 'logo' %></li>
       <li><span id="logo">|</span></li>
-      <li><%= link_to 'Сравнение говн', compare_url %></li> 
-      <li><%= link_to 'Бурление недели' %></li>
-      <li><%= link_to 'Топ лист', :controller => "main", :action => "topshit" %></li>
+      <li><%= link_to t(:compare_shits), compare_url %></li> 
+      <li><%= link_to t(:week_rating) %></li>
+      <li><%= link_to t(:toplist), :controller => "main", :action => "topshit" %></li>
     </ul>
   </div>  
   <div id="mainDiv">

@@ -22,7 +22,7 @@ class MainController < ApplicationController
   end
   
   def make_notice_about_shitting(shit)
-    flash[:notice] = shit.capitalized_name + " - officially shit " + shit.total.to_s + " times!" unless shit.nil?
+    flash[:notice] = t(:officially_shit, :name=>shit.capitalized_name, :count=>shit.total.to_s)
   end
   
   def compare
