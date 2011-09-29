@@ -30,7 +30,7 @@ class MainController < ApplicationController
   private 
   
   def make_notice_about_shitting(shit)
-    flash[:notice] = t(:officially_shit, :name=>shit.capitalized_name, :count=>shit.total.to_s)
+    flash[:notice] = t(:officially_shit, :name=>shit.capitalized_name, :count=>shit.total)
   end
   
 end
