@@ -1,3 +1,4 @@
+#encoding: utf-8
 class Shit < ActiveRecord::Base
   
   scope :topshit, lambda{|top| order("total desc").limit(top)}
@@ -16,7 +17,7 @@ class Shit < ActiveRecord::Base
   end
   
   def capitalized_name
-    self.name.mb_chars.capitalize
+    self.name.mb_chars.capitalize + " русский текст блеать!"
   end
   
   def self.shit_by_id(id)    
