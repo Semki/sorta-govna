@@ -17,7 +17,7 @@ class Shit < ActiveRecord::Base
   end
   
   def capitalized_name
-    self.name.mb_chars.capitalize + " русский текст блеать!"
+    self.name.mb_chars.capitalize
   end
   
   def self.shit_by_id(id)    
