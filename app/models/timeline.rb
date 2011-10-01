@@ -3,8 +3,8 @@ class Timeline < ActiveRecord::Base
   
   def self.add_new_timeline_item(shit)
     date = Date.today
-    item = find_shit_in_timeline(shit, date)
-    item = Timeline.create_timeline_item(shit, date) if @timelineitem.nil?
+    item = Timeline.find_shit_in_timeline(shit, date)
+    item = Timeline.create_timeline_item(shit, date) if item.nil?
     item.inc_total
   end
 
@@ -13,7 +13,7 @@ class Timeline < ActiveRecord::Base
   end
       
   def self.find_shit_in_timeline(shit, date)
-    shit.timelines.where(:date => date)
+    shit.timelines.where(:date => date).first
   end
   
   def inc_total

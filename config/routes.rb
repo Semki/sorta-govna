@@ -19,7 +19,7 @@ GovnoRf::Application.routes.draw do
 
   get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'
 
- 
+  match "timeline/index" => "timeline#index"
   
   #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
   # The priority is based upon order of creation:
