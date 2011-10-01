@@ -2,7 +2,7 @@ class SynonymsController < ApplicationController
   # GET /synonyms
   # GET /synonyms.json
   
-  autocomplete :synonym, :name
+  autocomplete :synonym, :name , :extra_data => [:shit_id]
   
   def index
     @synonyms = Synonym.all
@@ -82,9 +82,6 @@ class SynonymsController < ApplicationController
       format.html { redirect_to synonyms_url }
       format.json { head :ok }
     end
-  end
-    
-    
-    
+  end    
     
 end

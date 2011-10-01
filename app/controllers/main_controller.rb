@@ -11,7 +11,7 @@ class MainController < ApplicationController
   end
 	
   def shit_it
-    make_notice_about_shitting(Shit.shit_by_name(params[:name]))    
+    make_notice_about_shitting(Shit.shit_by_id(params[:id]))    
     respond_with("shit_it")
   end    
   
