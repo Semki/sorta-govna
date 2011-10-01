@@ -1,4 +1,5 @@
 class ShitsController < ApplicationController
+	respond_to :html, :js
 	
   # GET /shits
   # GET /shits.xml

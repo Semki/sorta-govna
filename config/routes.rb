@@ -17,6 +17,9 @@ GovnoRf::Application.routes.draw do
 
   match "/compare" => "main#compare", :as => :compare
 
+  get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'
+
+  match "timeline/index" => "timeline#index"
   
 
   # The priority is based upon order of creation:
