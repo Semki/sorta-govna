@@ -9,13 +9,7 @@ class Timeline < ActiveRecord::Base
   end
 
   def self.create_timeline_item(shit, date)
-    # Self.create(:shit => shit, :date => date )
-    item = Timeline.new
-    item.shit = shit
-    item.date = date
-    item.total = 0
-    item.save
-    item
+    self.create(:shit => shit, :date => date, :total => 0 )
   end
       
   def self.find_shit_in_timeline(shit, date)
