@@ -1,6 +1,7 @@
 #encoding: utf-8
 class Shit < ActiveRecord::Base
-  
+  has_many :synonyms  
+
   scope :topshit, lambda{|top| order("total desc").limit(top)}
   
   def self.with_names(names)
