@@ -12,7 +12,7 @@
 <% @synonyms.each do |synonym| %>
   <tr>
     <td><%= synonym.name %> </td>
-    <td><%= concept_in_list(synonym.shit) %></td>
+    <td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
     <td><%= link_to 'Show', synonym %></td>
     <td><%= link_to 'Edit', edit_synonym_path(synonym) %></td>
     <td><%= link_to 'Destroy', synonym, confirm: 'Are you sure?', method: :delete %></td>
