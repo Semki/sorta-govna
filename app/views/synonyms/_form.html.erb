@@ -14,11 +14,11 @@
   <table>
     <tr>
       <td>Название</td>
-      <td><%= f.text_field 'name' %></td>
+      <td><%= f.text_field :name %></td>
     </tr>
     <tr>
-      <td>Id концепта</td>
-      <td><%= f.text_field 'shit_id'%></td>
+      <td>Концепт</td>
+      <td><%= f.collection_select :shit_id, Shit.all, :id, :name %></td>
     </tr>
   </table>
   </br>
