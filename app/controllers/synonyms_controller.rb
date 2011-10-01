@@ -1,6 +1,9 @@
 class SynonymsController < ApplicationController
   # GET /synonyms
   # GET /synonyms.json
+  
+  autocomplete :synonym, :name
+  
   def index
     @synonyms = Synonym.all
 
@@ -80,4 +83,8 @@ class SynonymsController < ApplicationController
       format.json { head :ok }
     end
   end
+    
+    
+    
+    
 end

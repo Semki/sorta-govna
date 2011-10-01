@@ -1,6 +1,6 @@
 <div id="shitItDiv">
 <%= form_tag({:action => :shit_it}, :remote => true) do %>
-    <%=autocomplete_field_tag 'name', '', main_autocomplete_shit_name_path, :class => "whatIsShit" %>
+    <%= autocomplete_field_tag 'name', '', synonyms_autocomplete_synonym_name_path, :class => "whatIsShit" %>
 		<%= submit_tag t(:shit), :class => 'submitShit' %>
   <% end %> 
   <br /> 

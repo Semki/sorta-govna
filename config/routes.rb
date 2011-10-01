@@ -2,10 +2,10 @@ GovnoRf::Application.routes.draw do
   
    
   root :to => "main#index" 
+  
+  get 'synonyms/autocomplete_synonym_name' => 'synonyms#autocomplete_synonym_name'
     
   resources :synonyms
-
-  
 
   resources :shits
 
@@ -17,11 +17,8 @@ GovnoRf::Application.routes.draw do
 
   match "/compare" => "main#compare", :as => :compare
 
-  get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'
-
- 
   
-  #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
