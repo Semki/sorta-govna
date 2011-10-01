@@ -1,16 +1,18 @@
-<h1>Listing synonyms</h1>
+<h1>Список синонимов</h1>
 
 <table>
   <tr>
-    <th>Name</th>
-	<th></th>
-	<th></th>
+    <th>Название</th>
+    <th>Концепт</th>
+    <th></th>
+    <th></th>
     <th></th>
   </tr>
 
 <% @synonyms.each do |synonym| %>
   <tr>
-	<td><%= synonym.name %> </td> 
+    <td><%= synonym.name %> </td>
+    <td><%= concept_in_list(synonym.shit) %></td>
     <td><%= link_to 'Show', synonym %></td>
     <td><%= link_to 'Edit', edit_synonym_path(synonym) %></td>
     <td><%= link_to 'Destroy', synonym, confirm: 'Are you sure?', method: :delete %></td>

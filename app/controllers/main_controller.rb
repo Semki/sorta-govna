@@ -7,7 +7,7 @@ class MainController < ApplicationController
 
   # top list of sheet
   def topshit
-    @topshits = Shit.topshit(10)        
+    @topshits = Shit.topshit(10)
   end
 	
   def shit_it
