@@ -12,12 +12,10 @@ class MainController < ApplicationController
 	
   def shit_it
     make_notice_about_shitting(Shit.shit_by_name(params[:name]))    
-    respond_with("shit_it")
   end    
   
   def shit_by_id
-    make_notice_about_shitting(Shit.shit_by_id(params[:id]))
-    redirect_to :action => 'index'
+    make_top_shit_notice_about_shitting(Shit.shit_by_id(params[:id]))
   end
   
   def compare
@@ -31,6 +29,11 @@ class MainController < ApplicationController
   
   def make_notice_about_shitting(shit)
     flash[:notice] = t(:officially_shit, :name=>shit.capitalized_name, :count=>shit.total)
+  end
+  
+  def make_top_shit_notice_about_shitting(shit)
+	flash[:shitId] = shit.id.to_s
+	flash[:total] = shit.total
   end
   
 end

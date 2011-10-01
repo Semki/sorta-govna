@@ -8,16 +8,15 @@
   </tr>
 <% @topshits.each do |shit| %>
  
-  <tr cols='2'>
+  <tr cols='3'>
       <td><%= shit.name.mb_chars.capitalize %></td>
-      <td><%= shit.total %></td>
-      <td class="shit_it_cell"><%= link_to image_tag("turd.jpg", :border=>0), :controller => "main", :action => 'shit_by_id', :remote => true, :id => shit.id %></td>
+      <td class="shit_it_cell_total_<%=shit.id.to_s%>"><%= shit.total %></td>
+      <td class="shit_it_cell"><%= link_to image_tag("turd.jpg", :border=>0), { :controller => 'main', :action => 'shit_by_id', :id => shit.id }, :remote => true%></td>
   </tr>
 
  
 <% end %>
 </table>
-
 <br />
 
 
