@@ -17,7 +17,7 @@
       <li><%= link_to t(:sortagovna_ru), root_url, :id => 'logo' %></li>
       <li><span id="logo">|</span></li>
       <li><%= link_to t(:compare_shits), compare_url %></li> 
-      <li><%= link_to t(:week_rating) %></li>
+      <li><%= link_to t(:week_rating), :controller => "timeline", :action => "weekrating" %></li>
       <li><%= link_to t(:toplist), :controller => "main", :action => "topshit" %></li>
     </ul>
   </div>  

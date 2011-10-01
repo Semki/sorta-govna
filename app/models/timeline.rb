@@ -20,5 +20,9 @@ class Timeline < ActiveRecord::Base
     self.total = self.total + 1
     self.save
   end
+  
+  def self.get_by_period(startdate, finishdate)
+    Timeline.where("date >= ? and date <= ?", startdate, finishdate).order("total desc")
+  end
 
 end
