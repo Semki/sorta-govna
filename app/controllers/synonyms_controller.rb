@@ -2,7 +2,7 @@ class SynonymsController < ApplicationController
   # GET /synonyms
   # GET /synonyms.json
   
-  autocomplete :synonym, :name , :extra_data => [:shit_id]
+  autocomplete :synonym, :name , :extra_data => [:shit_id] ,:display_value => :description
   
   def index
     @synonyms = Synonym.all
