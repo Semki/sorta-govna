@@ -28,6 +28,7 @@ class Shit < ActiveRecord::Base
   def vote
     self.total = self.total + 1
     self.save
+    Timeline.add_new_timeline_item(self)
     self
   end
   

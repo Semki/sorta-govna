@@ -10,7 +10,18 @@
       </ul>
     </div>
   <% end %>
-
+  
+  <table>
+    <tr>
+      <td>Название</td>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <td>Концепт</td>
+      <td><%= f.collection_select :shit_id, Shit.all, :id, :name %></td>
+    </tr>
+  </table>
+  </br>
   <div class="actions">
     <%= f.submit %>
   </div>

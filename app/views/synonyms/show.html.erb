@@ -1,5 +1,18 @@
+<% # encoding: utf-8 %>
 <p id="notice"><%= notice %></p>
 
+<table>
+  <tr>
+    <td>Название</td>
+    <td><b><%= @synonym.name %></b></td>
+  </tr>
+  <tr>
+    <td>Концепт</td>
+    <td><%= link_to concept_in_list(@synonym.shit), @synonym.shit  %></td>
+  </tr>
+</table>
+
+</br>
 
 <%= link_to 'Edit', edit_synonym_path(@synonym) %> |
 <%= link_to 'Back', synonyms_path %>
