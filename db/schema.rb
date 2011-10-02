@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001082657) do
+ActiveRecord::Schema.define(:version => 20111002130135) do
 
   create_table "shits", :force => true do |t|
     t.string   "name"
@@ -21,12 +21,18 @@ ActiveRecord::Schema.define(:version => 20111001082657) do
     t.string   "description"
   end
 
+  add_index "shits", ["name"], :name => "index_shits_on_name"
+  add_index "shits", ["total"], :name => "index_shits_on_total"
+
   create_table "synonyms", :force => true do |t|
     t.string   "name"
     t.integer  "shit_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "synonyms", ["name"], :name => "index_synonyms_on_name"
+  add_index "synonyms", ["shit_id"], :name => "index_synonyms_on_shit_id"
 
   create_table "timelines", :force => true do |t|
     t.date     "date"
@@ -35,5 +41,9 @@ ActiveRecord::Schema.define(:version => 20111001082657) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "timelines", ["date"], :name => "index_timelines_on_date"
+  add_index "timelines", ["shit_id"], :name => "index_timelines_on_shit_id"
+  add_index "timelines", ["total"], :name => "index_timelines_on_total"
 
 end
