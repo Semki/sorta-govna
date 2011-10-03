@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h1><%= @shit.capitalized_name %></h1>
+<h1><%= name_with_synonyms(@shit) %></h1>
 <h2>Говно <%= @shit.total.to_s %> раз!</h2>
 <div class="descriptionDiv">
   <p>
