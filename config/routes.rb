@@ -13,7 +13,7 @@ GovnoRf::Application.routes.draw do
 
   match 'shit_it' => 'main#shit_it', :as => 'shit_it'
 
-  match "/topshit" => "main#topshit"
+  match "/topshit" => "main#topshit", :as => :topshit
 
   match "/shit_by_id" => "main#shit_by_id"
 
@@ -25,7 +25,7 @@ GovnoRf::Application.routes.draw do
   
   match "timeline/show_by_shit/:shit_id" => "timeline#show_by_shit"
   
-  #match "timeline/weekrating" => "timeline#weekrating" 
+  match "timeline/weekrating" => "timeline#weekrating", :as => :weekrating
   
   #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
   

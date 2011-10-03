@@ -27,6 +27,10 @@ div {
   color: green;
 }
 
+.notice_shit_total{
+    font-size: 18px;
+}
+
 ul.horizontal {
   list-style: none;
   margin: 0;

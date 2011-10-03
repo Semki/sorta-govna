@@ -1,6 +1,24 @@
-$('.notice').hide()
-$('.notice').html("<%= escape_javascript(flash[:notice]) %>");
-$('.notice').fadeIn('fast', function() {
-    // Animation complete.
-  });
-<% flash.discard %>
+
+var newName = "<%= escape_javascript(flash[:shit_name]) %>";
+var newTotal = "<%= escape_javascript(flash[:shitted_count].to_s) %>";
+if ($('.notice_officially_shit1').html() != "")
+{
+  if ($('.notice_shit_name').html() != newName)
+  {
+    $('.notice_shit_name').html(newName);
+  }
+    
+  //$('.notice_shit_total').hide();
+  $('.notice_shit_total').fadeOut('fast', function() { });
+  $('.notice_shit_total').html(newTotal);
+  $('.notice_shit_total').fadeIn('fast', function() { });
+}
+else
+{
+  $('.notice').hide();
+  $('.notice_shit_name').html(newName);
+  $('.notice_officially_shit1').html("<%= escape_javascript(t(:officially_shit1)) %>");
+  $('.notice_shit_total').html(newTotal);
+  $('.notice_officially_shit2').html("<%= escape_javascript(t(:officially_shit2)) %>");
+  $('.notice').fadeIn('fast', function() { });
+}
