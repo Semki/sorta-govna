@@ -16,4 +16,6 @@ en:
   officially_shit: "%{name} — officially shit %{count} times"
   date: "date"
   timeline_by_shit: "Shit by dates"
+  shits_editor: "Concept editor"
+  synonyms_editor: "Synonyms editor"
   
