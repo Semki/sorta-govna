@@ -4,7 +4,19 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: -1px;
-  width: 791px;
+  width: 925px;
+}
+
+h1 {
+	text-align: center;
+	line-height: 40px;
+}
+
+table {
+	width: 100%;
+	padding: 0;
+	border-collapse: collapse;
+	text-align: center;
 }
 
 div {
@@ -55,8 +67,11 @@ ul.horizontal li {
   position: relative;
   padding: 8px 8px 13px 0px;
   border-top: solid 1px white;
+	/*
   background: -webkit-gradient(linear, left top, left bottom, from(#FFCC00), to(#996633));
   background: -moz-linear-gradient(top, #FFCC00, #996633);
+	*/
+	background: #996633;
   border-bottom: solid 3px #DE9F00;
   margin-bottom: 15px;
   -webkit-border-bottom-right-radius: 8px;
@@ -111,8 +126,6 @@ form {
 	margin-top: 50px;
 }
 
-
-
 .whatIsShit {
 	font-family: TeXGyre, Georgia, serif;
   font-size: 20pt;
@@ -141,7 +154,6 @@ form {
   height: 100px;
 }
 
-.top_table {width:50%; text-align: right; padding:0; border-collapse: collapse;}
 td, th { padding:5px 20px; margin:0;}
 
 .top_table .shit_it_cell {text-align: left; padding-left:20px;}

@@ -7,3 +7,4 @@ tmp/
 *.swp
 *.bat
 Gemfile.lock
+nbproject

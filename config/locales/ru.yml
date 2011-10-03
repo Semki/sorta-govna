@@ -13,3 +13,6 @@ ru:
   officially_shit: "%{name} — официальное говно %{count} раз"
   date: "Дата"
   timeline_by_shit: "Статистика по дням"
+  shits_editor: "Редактор концептов"
+  synonyms_editor: "Редактор синонимов"
+  name_aka_synonyms: "%{name}, также известно как %{synonyms}"

@@ -1,7 +1,5 @@
 class SynonymsController < ApplicationController
-  # GET /synonyms
-  # GET /synonyms.json
-  
+  respond_to :html, :js
   autocomplete :synonym, :name , :extra_data => [:shit_id] ,:display_value => :description
   
   def index
@@ -49,6 +47,7 @@ class SynonymsController < ApplicationController
       if @synonym.save
         format.html { redirect_to @synonym, notice: 'Synonym was successfully created.' }
         format.json { render json: @synonym, status: :created, location: @synonym }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @synonym.errors, status: :unprocessable_entity }
