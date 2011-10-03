@@ -1,0 +1,11 @@
+<div id="synonym-from-concept-div">
+  <h3>Создать синоним</h3>
+  <%= form_for :synonym, :url => synonyms_path, :remote => true do |f| %>
+    <%= f.hidden_field :shit_id, :value => @shit.id %>
+    <p>Название</p>
+    <%= f.text_field :name, :class => 'synonym-name' %>
+    </br>  
+    <%= f.submit 'Создать' %>
+    <span id='synonym-notice'></span>
+  <% end %>
+</div>
