@@ -8,7 +8,8 @@ if ($('.notice_officially_shit1').html() != "")
     $('.notice_shit_name').html(newName);
   }
     
-  $('.notice_shit_total').hide();
+  //$('.notice_shit_total').hide();
+  $('.notice_shit_total').fadeOut('fast', function() { });
   $('.notice_shit_total').html(newTotal);
   $('.notice_shit_total').fadeIn('fast', function() { });
 }
