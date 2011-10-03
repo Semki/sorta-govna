@@ -22,7 +22,8 @@ class Timeline < ActiveRecord::Base
   end
   
   def self.get_by_period(startdate, finishdate)
-    Timeline.where("date >= ? and date <= ?", startdate, finishdate).order("total desc")
+    Timeline.where("date >= ? and date <= ?", startdate,
+	finishdate).group(:shit_id).order("total desc")
   end
 
 end
