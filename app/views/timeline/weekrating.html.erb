@@ -4,14 +4,12 @@
   <tr>
     <th><%= t(:shit) %></th>
     <th><%= t(:total) %></th>
-    <th><%= t(:date) %></th>
   </tr>
 <% @timeline.each do |timelineitem| %>
  
   <tr cols='3'>
-      <td><%= timelineitem.shit.name %></td>
+      <td><%= timelineitem.shit_name %></td>
       <td><%= timelineitem.total %></td>
-      <td><%= timelineitem.date %></td>
   </tr>
 
  
