@@ -28,12 +28,13 @@ class MainController < ApplicationController
   private 
   
   def make_notice_about_shitting(shit)
-    flash[:notice] = t(:officially_shit, :name=>shit.capitalized_name, :count=>shit.total)
+    flash[:shitted_count] = shit.total
+    flash[:shit_name] = shit.capitalized_name
   end
   
   def make_top_shit_notice_about_shitting(shit)
-	flash[:shitId] = shit.id.to_s
-	flash[:total] = shit.total
+    flash[:shitId] = shit.id.to_s
+    flash[:total] = shit.total
   end
   
 end
