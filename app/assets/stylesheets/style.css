@@ -18,12 +18,6 @@ table {
 	text-align: center;
 }
 
-.warning {
-	background-color: #ffff80;
-	color: #bb3113;
-	font-weight: bold;
-}
-
 div {
   display: block;
 }
