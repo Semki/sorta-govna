@@ -29,7 +29,7 @@ class MainController < ApplicationController
   
   def make_notice_about_shitting(shit)
     flash[:shitted_count] = shit.total
-    flash[:shit_name] = shit.capitalized_name
+    flash[:shit_name] = shit.name
   end
   
   def make_top_shit_notice_about_shitting(shit)
