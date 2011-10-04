@@ -1,4 +1,4 @@
-# Sample localization file for English. Add more files in this directory for other locales.
+﻿# Sample localization file for English. Add more files in this directory for other locales.
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
@@ -6,7 +6,7 @@ en:
   hello: "Hello world"
   shit: "Shit"
   compare_shits: "Compare shits"
-  toplist: "Top list"
+  toplist: "First class"
   week_rating: "Week rating"
   compare: "Compare"
   top_10_shits: "Top 10 most shitty shits"
@@ -17,7 +17,7 @@ en:
   officially_shit2: " times"
   date: "date"
   timeline_by_shit: "Shit by dates"
-  shits_editor: "Concept editor"
-  synonyms_editor: "Synonyms editor"
+  shits_editor: "Concepts"
+  synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
   

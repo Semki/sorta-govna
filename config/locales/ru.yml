@@ -1,9 +1,9 @@
-ru:
+﻿ru:
   sortagovna_ru: "Сортаговна.ру"
   hello: "Привет!"
   shit: "Говно"
   compare_shits: "Сравнение говн"
-  toplist: "Топ лист"
+  toplist: "Высший сорт"
   week_rating: "Бурление недели"
   compare: "Сравнить"
   top_10_shits: "10 самых говенных говн"
@@ -14,6 +14,6 @@ ru:
   officially_shit2: " раз"
   date: "Дата"
   timeline_by_shit: "Статистика по дням"
-  shits_editor: "Редактор концептов"
-  synonyms_editor: "Редактор синонимов"
+  shits_editor: "Концепты"
+  synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
