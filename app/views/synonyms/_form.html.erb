@@ -20,6 +20,10 @@
       <td>Концепт</td>
       <td><%= f.collection_select :shit_id, Shit.all, :id, :name %></td>
     </tr>
+	<tr>
+	  <td>Релевантность</td>
+	  <td><%= f.select :relevance, (1..4).to_a.reverse %></td>
+	</tr>
   </table>
   </br>
   <div class="actions">

@@ -4,7 +4,9 @@
     <%= f.hidden_field :shit_id, :value => @shit.id %>
     <p>Название</p>
     <%= f.text_field :name, :class => 'synonym-name' %>
-    </br>  
+	<p>Релевантность</p>
+    <%= f.select :relevance, (1..4).to_a.reverse %>
+    <br />
     <%= f.submit 'Создать' %>
     <span id='synonym-notice'></span>
   <% end %>

@@ -2,6 +2,9 @@
 class Shit < ActiveRecord::Base
   has_many :synonyms  
   has_many :timelines
+  
+  before_create :create_main_synonym
+  
   scope :topshit, lambda{|top| order("total desc").limit(top)}
   
   def self.with_names(names)
@@ -30,6 +33,13 @@ class Shit < ActiveRecord::Base
     self.save
     Timeline.add_new_timeline_item(self)
     self
+  end
+  
+  private
+  
+  def create_main_synonym
+    synonym = Synonym.new(:name=>name, :relevance=>4)
+    synonyms << synonym
   end
   
   

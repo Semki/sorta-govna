@@ -1,6 +1,7 @@
 class SynonymsController < ApplicationController
   respond_to :html, :js
-  autocomplete :synonym, :name , :extra_data => [:shit_id] ,:display_value => :description
+  autocomplete :synonym, :name, :extra_data => [:shit_id,:relevance] ,:display_value => :description,
+  :scopes => [:autocomplete_scope]
   
   def index
     @synonyms = Synonym.all

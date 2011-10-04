@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111002130135) do
+ActiveRecord::Schema.define(:version => 20111004132338) do
 
   create_table "shits", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20111002130135) do
     t.integer  "shit_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "relevance"
   end
 
   add_index "synonyms", ["name"], :name => "index_synonyms_on_name"
