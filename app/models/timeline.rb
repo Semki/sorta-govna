@@ -22,7 +22,7 @@ class Timeline < ActiveRecord::Base
   end
   
   def self.get_by_period(startdate, finishdate)
-    Timeline.select(' sum("timelines".total) as total, shit_id as shot_id, shits.name as shit_name').where("date >= ? and date <= ?", startdate, finishdate).joins(:shit).group(:shit_id).order("timelines.total desc")
+    Timeline.select(' sum("timelines".total) as total, shit_id as shit_id, shits.name as shit_name').where("date >= ? and date <= ?", startdate, finishdate).joins(:shit).group(:shit_id, :shit_name).order("timelines.total desc")
   end
 
 end
