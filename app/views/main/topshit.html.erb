@@ -13,7 +13,7 @@
       <td><%= shit.name %></td>
       <td class="shit_it_cell_total_<%=shit.id.to_s%>"><%= shit.total %></td>
       <td class="shit_it_cell"><%= link_to image_tag("turd.jpg", :border=>0), { :controller => 'main', :action => 'shit_by_id', :id => shit.id }, :remote => true%></td>
-      <td> <%= link_to t(:timeline_by_shit), { :controller => 'timeline', :action=>'show_by_shit', :shit_id => shit.id} %> </td>
+      <td> <%= link_to t(:timeline_by_shit), { :controller => 'timeline', :action=>'show_by_shit_by_week', :shit_id => shit.id} %> </td>
   </tr>
 
  
