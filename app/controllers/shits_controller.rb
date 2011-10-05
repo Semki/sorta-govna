@@ -4,7 +4,7 @@ class ShitsController < ApplicationController
   # GET /shits
   # GET /shits.xml
   def index
-    @shits = Shit.order(:name).page(params[:page]).per(5)
+    @shits = Shit.order(:name).page(params[:page]).per(20)
 
     respond_to do |format|
       format.html # index.html.erb

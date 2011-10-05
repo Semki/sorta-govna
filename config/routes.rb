@@ -25,6 +25,8 @@ GovnoRf::Application.routes.draw do
   
   match "timeline/show_by_shit/:shit_id" => "timeline#show_by_shit"
   
+  match "timeline/show_by_shit_by_week/:shit_id" => "timeline#show_by_shit_by_week"
+  
   match "timeline/weekrating" => "timeline#weekrating", :as => :weekrating
   
   #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
