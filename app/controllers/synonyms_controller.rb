@@ -4,7 +4,7 @@ class SynonymsController < ApplicationController
   :scopes => [:autocomplete_scope]
   
   def index
-    @synonyms = Synonym.all
+    @synonyms = Synonym.order(:name).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb

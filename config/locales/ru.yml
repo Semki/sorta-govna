@@ -17,3 +17,11 @@
   shits_editor: "Концепты"
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
+  views:
+    pagination:
+      previous: "&lt; Предыдущий"
+      next: "Следующий &gt;"
+      last: "Последний &gt;&gt;"
+      first: "&lt;&lt;Первый"
+      truncate: "..."
+

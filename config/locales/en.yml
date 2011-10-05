@@ -21,3 +21,8 @@ en:
   synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
   
+  views:
+    pagination:
+      previous: "&lt; Previous"
+      next: "Next &gt;"
+      truncate: "..."
