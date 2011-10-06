@@ -1,7 +1,19 @@
 ﻿<h1> <%= t(:timeline_by_shit) %> </h1>
 
-<div> 
- <img  src=<%=@img%>    alt=t(:timeline_by_shit) >
+<div style="width: 100%;"> 
+ <table>
+ <tr>
+ <td>
+ <%= link_to t(:prev), url_for(:week=>params[:week].to_i - 1) %>
+ </td>
+ <td>
+ <img  src=<%=@img%>  alt=t(:timeline_by_shit) >
+ </td>
+ <td>
+ <%= link_to t(:next), url_for(:week=>params[:week].to_i + 1) %>
+ </td>
+ </tr>
+ </table>
 </div>
 
 <br />

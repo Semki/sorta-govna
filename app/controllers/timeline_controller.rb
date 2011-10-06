@@ -6,7 +6,7 @@ class TimelineController < ApplicationController
   def show_by_shit_by_week
     weekindex = 0
     weekindex = params[:week].to_f unless params[:week].nil?
-    @img = Timeline.show_by_shit_by_week(params[:shit_id], weekindex, t(:timeline_by_shit))
+    @img = Timeline.show_by_shit_by_week(params[:shit_id], weekindex)
   end
   
   def weekrating
