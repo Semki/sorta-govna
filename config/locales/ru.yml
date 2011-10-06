@@ -37,7 +37,8 @@
   page_synonym_show: "Синоним"
   page_synonym_create: "Создание синонима"
   page_synonym_edit: "Редактирование синонима %{name}"
- 
+  prev: "Предыдущий"
+  next: "Следующий" 
   views:
     pagination:
       previous: "&lt; Предыдущий"

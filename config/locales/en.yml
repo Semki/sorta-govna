@@ -22,6 +22,8 @@ en:
   shits_editor: "Concepts"
   synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
+  prev: "previous"
+  next: "next" 
   
   # Заголовки страниц
   # Название начинается с page_

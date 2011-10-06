@@ -25,7 +25,7 @@ class Timeline < ActiveRecord::Base
     Timeline.select(' sum("timelines".total) as total, shit_id as shit_id, shits.name as shit_name').where("date >= ? and date <= ?", startdate, finishdate).joins(:shit).group(:shit_id, :shit_name).order("total desc")
   end
   
-  def self.show_by_shit_by_week(shit_id, weekindex, title)
+  def self.show_by_shit_by_week(shit_id, weekindex)
     shit = Shit.find(shit_id)
     period = 7
     datefinish = Date.today + (period * weekindex)
@@ -53,7 +53,8 @@ class Timeline < ActiveRecord::Base
       end
     end
     
-    str = "800x250"
+	title = datestart.to_s + " - " + datefinish.to_s
+    str = "600x250"
     Gchart.bar(:title => title, :orientation => 'vertical', :bar_width_and_spacing => 70, 
     :axis_with_labels => ['x', 't', 'r'], :axis_labels => [datesline, totalline, scaleline], :legend => shit.name, :data => totalline, :size => str)
     
