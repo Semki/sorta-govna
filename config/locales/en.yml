@@ -3,6 +3,8 @@
 
 en:
   sortagovna_ru: "Sortagovna.ru"
+  sortagovna: "Sorta govna"
+  main_page: "Main"
   hello: "Hello world"
   shit: "Shit"
   compare_shits: "Compare shits"
@@ -20,6 +22,25 @@ en:
   shits_editor: "Concepts"
   synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
+  
+  # Заголовки страниц
+  # Название начинается с page_
+  page_sortagovna: "Sorta govna"
+  page_root: "Index"
+  page_compare: "Comparsion"
+  page_week_rating: "Weekly butthurt"
+  page_top_list: "First class"
+  page_shit_by_date: "Daily statistics"
+  
+  page_concept_index: "Concept list"
+  page_concept_show: "Concept"
+  page_concept_create: "Create concept"
+  page_concept_edit: "Edit concept %{name}"
+  
+  page_synonym_index: "Synonyms list"
+  page_synonym_show: "Synonym"
+  page_synonym_create: "Create synonym"
+  page_synonym_edit: "Edit synonym %{name}"
   
   views:
     pagination:

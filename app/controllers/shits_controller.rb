@@ -4,6 +4,7 @@ class ShitsController < ApplicationController
   # GET /shits
   # GET /shits.xml
   def index
+		@title = t(:page_concept_index)
     @shits = Shit.order(:name).page(params[:page]).per(20)
 
     respond_to do |format|
@@ -15,8 +16,9 @@ class ShitsController < ApplicationController
   # GET /shits/1
   # GET /shits/1.xml
   def show
+		@title = t(:page_concept_show)
     @shit = Shit.find(params[:id])
-
+	
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @shit }
@@ -26,6 +28,7 @@ class ShitsController < ApplicationController
   # GET /shits/new
   # GET /shits/new.xml
   def new
+		@title = t(:page_concept_create)
     @shit = Shit.new
 
     respond_to do |format|
@@ -37,6 +40,7 @@ class ShitsController < ApplicationController
   # GET /shits/1/edit
   def edit
     @shit = Shit.find(params[:id])
+    @title = t(:page_concept_edit, :name => @shit.name)
   end
 
   # POST /shits

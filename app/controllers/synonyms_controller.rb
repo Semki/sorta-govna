@@ -4,6 +4,7 @@ class SynonymsController < ApplicationController
   :scopes => [:autocomplete_scope]
   
   def index
+    @title = t(:page_synonym_index)
     @synonyms = Synonym.order(:name).page(params[:page]).per(20)
 
     respond_to do |format|
@@ -15,6 +16,7 @@ class SynonymsController < ApplicationController
   # GET /synonyms/1
   # GET /synonyms/1.json
   def show
+    @title = t(:page_synonym_show)
     @synonym = Synonym.find(params[:id])
 
     respond_to do |format|
@@ -26,6 +28,7 @@ class SynonymsController < ApplicationController
   # GET /synonyms/new
   # GET /synonyms/new.json
   def new
+    @title = t(:page_synonym_create)
     @synonym = Synonym.new
 
     respond_to do |format|
@@ -37,6 +40,7 @@ class SynonymsController < ApplicationController
   # GET /synonyms/1/edit
   def edit
     @synonym = Synonym.find(params[:id])
+    @title = t(:page_synonym_edit, :name => @synonym.name)
   end
 
   # POST /synonyms

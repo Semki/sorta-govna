@@ -1,4 +1,5 @@
 ﻿ru:
+  sortagovna: "Сорта говна"
   sortagovna_ru: "Сортаговна.ру"
   hello: "Привет!"
   shit: "Говно"
@@ -17,6 +18,26 @@
   shits_editor: "Концепты"
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
+  
+  # Заголовки страниц
+  # Название начинается с page_
+  page_sortagovna: "Сорта говна"
+  page_root: "Главная"
+  page_compare: "Сравнение говн"
+  page_week_rating: "Бурление недели"
+  page_top_list: "Высший сорт"
+  page_shit_by_date: "Статистика по дням"
+  
+  page_concept_index: "Список концептов"
+  page_concept_show: "Концепт"
+  page_concept_create: "Создание концепта"
+  page_concept_edit: "Редактирование концепта %{name}"
+  
+  page_synonym_index: "Список синонимов"
+  page_synonym_show: "Синоним"
+  page_synonym_create: "Создание синонима"
+  page_synonym_edit: "Редактирование синонима %{name}"
+ 
   views:
     pagination:
       previous: "&lt; Предыдущий"
@@ -24,4 +45,3 @@
       last: "Последний &gt;&gt;"
       first: "&lt;&lt;Первый"
       truncate: "..."
-

@@ -1,12 +1,15 @@
+# encoding: utf-8
 class MainController < ApplicationController
   respond_to :html, :js
   autocomplete :shit, :name
   
   def index
+		@title = t(:page_root)
   end
 
   # top list of sheet
   def topshit
+		@title = t(:page_top_list)
     @topshits = Shit.topshit(10)
   end
 	
@@ -19,6 +22,7 @@ class MainController < ApplicationController
   end
   
   def compare
+		@title = t(:page_compare)
     if params[:name]
       @sorted_shits = Shit.with_names(params[:name].values).sort_by{|s| s.total}.reverse
       @do_compare = true
