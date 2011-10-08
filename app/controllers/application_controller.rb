@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   if Rails.env.production?
-    http_basic_authenticate_with :name=>"admin", :password => "kvitunov"
+    # http_basic_authenticate_with :name=>"admin", :password => "kvitunov"
   end
   
   before_filter :set_locale
