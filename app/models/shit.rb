@@ -2,7 +2,7 @@
 class Shit < ActiveRecord::Base
   has_many :synonyms  
   has_many :timelines
-  
+  validates :name, :presence => true
   before_create :create_main_synonym
   
   scope :topshit, lambda{|top| order("total desc").limit(top)}
