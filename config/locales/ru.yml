@@ -18,6 +18,15 @@
   shits_editor: "Концепты"
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
+
+  # validaton errors
+  activerecord:
+    errors:
+      full_messages:
+        synonym:
+          doublicate_synonym_error: "We've already have the synonym with same name and shit"
+  
+  #doublicate_synonym_error: "Уже есть синоним с таким же названием и таким же говнецом"
   
   # Заголовки страниц
   # Название начинается с page_

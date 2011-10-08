@@ -23,7 +23,12 @@ en:
   synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
   prev: "previous"
-  next: "next" 
+  next: "next"
+  activerecord:
+    errors:
+      full_messages:
+        synonym:
+          doublicate_synonym_error: "We've already have the synonym with same name and shit"
   
   # Заголовки страниц
   # Название начинается с page_
