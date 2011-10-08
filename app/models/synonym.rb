@@ -19,8 +19,12 @@ class Synonym < ActiveRecord::Base
   
   # валидация по наличию дубликата. Дубликатом считаем синоним с таким же именем и концептом.
   def has_no_doublicate
-    is_empty = Synonym.where("shit_id = ? and name = ? ", shit_id, name).limit(1).empty?
+    if id.nil?
+      is_empty = Synonym.where("shit_id = ? and name = ? ", shit_id, name).limit(1).empty?
+    else
+      is_empty = Synonym.where("shit_id = ? and name = ? and id <> ? ", shit_id, name, id).limit(1).empty?
+    end
     # уже есть синоним с таким именем и концептом!
-    errors.add(:shit_id, "We have the same synonym!!!") unless is_empty
+    errors.add(:full_message, "doublicate_synonym_error") unless is_empty
   end
 end
