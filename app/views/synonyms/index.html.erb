@@ -5,7 +5,7 @@
   <tr>
     <th>Название</th>
     <th>Концепт</th>
-	<th>Релевантность</th>
+		<th>Релевантность</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,8 +15,8 @@
   <tr>
     <td><%= synonym.name %> </td>
     <td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
-    <td><%= synonym.relevance %></td>
-	<td><%= link_to 'Show', synonym %></td>
+    <td><%= image_tag("relevance#{synonym.relevance}.png") %></td>
+		<td><%= link_to 'Show', synonym %></td>
     <td><%= link_to 'Edit', edit_synonym_path(synonym) %></td>
     <td><%= link_to 'Destroy', synonym, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
