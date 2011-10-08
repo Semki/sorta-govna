@@ -6,6 +6,7 @@ class ShitsController < ApplicationController
   def index
 		@title = t(:page_concept_index)
     @shits = Shit.order(:name).page(params[:page]).per(20)
+    @ololo = Shit.all
 
     respond_to do |format|
       format.html # index.html.erb
