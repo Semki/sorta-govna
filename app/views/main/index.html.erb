@@ -1,10 +1,10 @@
-<div id="shitItDiv">
+<div id="shit-it">
 <%= form_tag({:action => :shit_it}, :remote => true) do %>
     <%= autocomplete_field_tag 'autocomplete_synonym', '', synonyms_autocomplete_synonym_name_path, 
-:update_elements => {:shit_id => '#id'}, :class => "whatIsShit" %>
+:update_elements => {:shit_id => '#id'}, :id => "shit-name" %>
 	<%= hidden_field_tag 'id' %>
 	
-	<%= submit_tag t(:shit), :class => 'submitShit',:disabled=>true %>
+	<%= submit_tag t(:shit), :id => 'submit-shit', :disabled=>true %>
 <% end %>
  
   <br /> 
@@ -18,7 +18,7 @@
 
   <script type='text/javascript'>
     $('#autocomplete_synonym').bind('railsAutocomplete.select', function(event, data){
-     $('.submitShit').attr('disabled',false);
+     $('#submit-shit').attr('disabled',false);
 	});
   </script>
 

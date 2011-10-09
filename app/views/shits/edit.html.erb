@@ -1,14 +1,15 @@
-<h1>Редактирование говнеца</h1>
-
-<table>
-  <tr>
-    <td>
-      <%= render 'form' %>
-    </td>
-    <td>
-      <%= render 'attach_synonym' %>
-    </td>
-  </tr>
-</table>
-<%= link_to 'Просмотр', @shit %> |
-<%= link_to 'К списку', shits_path %>
+<div id="shit-edit">
+  <h1>Редактирование говнеца</h1>
+  <table>
+    <tr>
+      <td>
+        <%= render 'form' %>
+      </td>
+      <td>
+        <%= render 'attach_synonym' %>
+      </td>
+    </tr>
+  </table>
+  <%= link_to 'Просмотр', @shit %> |
+  <%= link_to 'К списку', shits_path %>
+</div>
