@@ -18,6 +18,7 @@
   shits_editor: "Концепты"
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
+  sign_out: "Выйти"
 
   # validaton errors
   activerecord:

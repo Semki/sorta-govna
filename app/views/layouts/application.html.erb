@@ -18,10 +18,10 @@
         <li><%= link_to t(:compare_shits), compare_url %></li>
         <li><%= link_to t(:week_rating), weekrating_url %></li>
         <li><%= link_to t(:toplist), topshit_url, :style => 'background-image: none;' %></li>
-        <!-- Это всё должно быть в админке
-        <li><%= link_to t(:shits_editor), shits_path %></li>
-        <li><%= link_to t(:synonyms_editor), synonyms_path %></li>
-        -->
+        <% if user_signed_in? %>
+          <li><%= link_to t(:shits_editor), shits_path %></li>
+          <li><%= link_to t(:synonyms_editor), synonyms_path %></li>
+        <% end %>
       </ul>
     </div>
     <!-- Пока не нужно
@@ -29,6 +29,9 @@
       <%= switch_language_link %>
     </div>
     -->
+    <% if user_signed_in? %>
+      <%= link_to t(:sign_out), destroy_user_session_path, :method => :delete %>
+    <% end %>
   </div>
   <div id="content">
     <%= yield %>
