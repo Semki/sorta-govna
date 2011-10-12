@@ -2,12 +2,14 @@
 	
 	<script type="text/javascript">
   $(function() {
-		$( ".trow").hover(function(){
-										$(".hideableClass", this).css("display", "block");},
-									function(){
-										$(".hideableClass", this).css("display", "none");}
-									);
-		$(".hideableClass").css("display", "none");	
+		$('.hideable-images-td img').hide();
+		$('.trow').hover(
+			function () {
+				$('.hideable-images-td img', this).fadeIn('fast');
+			},
+			function () {
+				$('.hideable-images-td img', this).fadeOut('fast');
+			});
 	});
 	</script>
 
@@ -28,9 +30,11 @@
 			<td><%= synonym.name %> </td>
 			<td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
 			<td><%= image_tag("relevance#{synonym.relevance}.png") %></td>
-			<td class="hideableClass"><%= link_to image_tag("show_icon.png", :border=>0), synonym %></td>
-			<td class="hideableClass"><%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %></td>
-			<td class="hideableClass"><%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %></td>
+			<td class="hideable-images-td">
+				<%= link_to image_tag("show_icon.png", :border=>0), synonym %>
+				<%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %>
+				<%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %>
+			</td>
 			<td></td>
 		</tr>
 	<% end %>

@@ -1,16 +1,18 @@
 <div id="shits-list">
   
-	
 	<script type="text/javascript">
   $(function() {
-		$( ".trow").hover(function(){
-										$(".hideableClass", this).css("display", "block");},
-									function(){
-										$(".hideableClass", this).css("display", "none");}
-									);
-		$(".hideableClass").css("display", "none");	
+		$('.hideable-images-td img').hide();
+		$('.trow').hover(
+			function () {
+				$('.hideable-images-td img', this).fadeIn('fast');
+			},
+			function () {
+				$('.hideable-images-td img', this).fadeOut('fast');
+			});
 	});
 	</script>
+  
 <h1>Список концептов</h1>
 
 <table width="100%">
@@ -33,9 +35,11 @@
       <%= '✘' if shit.synonyms.empty? %>
       </span>
     </td>
-    <td class="hideableClass"><%= link_to image_tag("show_icon.png", :border=>0), shit %></td>
-    <td class="hideableClass"><%= link_to image_tag("edit_icon.png", :border=>0), edit_shit_path(shit) %></td>
-    <td class="hideableClass"><%= link_to image_tag("delete_icon.png", :border=>0), shit, :confirm => 'Уверен?', :method => :delete %></td>
+    <td class="hideable-images-td">
+      <%= link_to image_tag("show_icon.png", :border=>0), shit %>
+      <%= link_to image_tag("edit_icon.png", :border=>0), edit_shit_path(shit) %>
+      <%= link_to image_tag("delete_icon.png", :border=>0), shit, :confirm => 'Уверен?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
 
