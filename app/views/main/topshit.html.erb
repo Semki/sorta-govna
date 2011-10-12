@@ -1,4 +1,17 @@
 ﻿<div id="top-shit">
+<script type="text/javascript">
+  $(function() {
+		$( ".trow").hover(  function () {
+      $(this).append($("<span> ***</span>"));  },
+      function () {    $(this).find("span:last").remove();  });
+
+  /*    .click(function() {
+			$( "#shit_it_cell" ).toggleClass( "newClass", 1000 );
+			return false;
+		});*/
+	});
+
+</script>
 <h1><%= t(:top_10_shits)%></h1>
 <table class="top_table">
   <tr>
@@ -8,7 +21,7 @@
     <th><%= t(:timeline_by_shit) %></th>
   </tr>
 <% @topshits.each do |shit| %>
-  <tr cols='3'>
+  <tr cols='3' class="trow">
       <td><%= shit.name %></td>
       <td class="shit_it_cell_total_<%=shit.id.to_s%>"><%= shit.total %></td>
       <td class="shit_it_cell"><%= link_to image_tag("turd.jpg", :border=>0), { :controller => 'main', :action => 'shit_by_id', :id => shit.id }, :remote => true%></td>

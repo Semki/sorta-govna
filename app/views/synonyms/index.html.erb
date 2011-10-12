@@ -1,4 +1,16 @@
 <div id="synonyms-list">
+	
+	<script type="text/javascript">
+  $(function() {
+		$( ".trow").hover(function(){
+										$(".hideableClass", this).css("display", "block");},
+									function(){
+										$(".hideableClass", this).css("display", "none");}
+									);
+		$(".hideableClass").css("display", "none");	
+	});
+	</script>
+
 	<h1>Список синонимов</h1>
 	<table>
 		<tr>
@@ -8,21 +20,23 @@
 			<th></th>
 			<th></th>
 			<th></th>
+			<th></th>
 		</tr>
 	
 	<% @synonyms.each do |synonym| %>
-		<tr>
+		<tr class="trow">
 			<td><%= synonym.name %> </td>
 			<td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
 			<td><%= image_tag("relevance#{synonym.relevance}.png") %></td>
-			<td><%= link_to 'Show', synonym %></td>
-			<td><%= link_to 'Edit', edit_synonym_path(synonym) %></td>
-			<td><%= link_to 'Destroy', synonym, confirm: 'Are you sure?', method: :delete %></td>
+			<td class="hideableClass"><%= link_to image_tag("show_icon.png", :border=>0), synonym %></td>
+			<td class="hideableClass"><%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %></td>
+			<td class="hideableClass"><%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %></td>
+			<td></td>
 		</tr>
 	<% end %>
 	</table>
 	
 	<br />
 	<%= paginate @synonyms %>
-	<%= link_to 'New Synonym', new_synonym_path %>
+	<%= link_to image_tag("add_icon.png", :border=>0), new_synonym_path %>
 </div>
