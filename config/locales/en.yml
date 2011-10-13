@@ -24,6 +24,13 @@ en:
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
   prev: "previous"
   next: "next"
+  
+  # synonyms
+  synonym_create: "Create new synonym"
+  
+  # shits
+  shit_create: "Create new concept"
+  
   activerecord:
     errors:
       full_messages:

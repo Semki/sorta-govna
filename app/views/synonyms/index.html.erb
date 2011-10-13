@@ -1,17 +1,4 @@
 <div id="synonyms-list">
-	
-	<script type="text/javascript">
-  $(function() {
-		$('.hideable-images-td img').hide();
-		$('.trow').hover(
-			function () {
-				$('.hideable-images-td img', this).fadeIn('fast');
-			},
-			function () {
-				$('.hideable-images-td img', this).fadeOut('fast');
-			});
-	});
-	</script>
 
 	<h1>Список синонимов</h1>
 	<table>
@@ -19,9 +6,6 @@
 			<th>Название</th>
 			<th>Концепт</th>
 			<th>Релевантность</th>
-			<th></th>
-			<th></th>
-			<th></th>
 			<th></th>
 		</tr>
 	
@@ -35,12 +19,12 @@
 				<%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %>
 				<%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %>
 			</td>
-			<td></td>
 		</tr>
 	<% end %>
 	</table>
 	
 	<br />
 	<%= paginate @synonyms %>
-	<%= link_to image_tag("add_icon.png", :border=>0), new_synonym_path %>
+	<br />
+	<%= link_to t(:synonym_create), new_synonym_path %>
 </div>

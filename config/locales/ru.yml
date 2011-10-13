@@ -19,6 +19,12 @@
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
   sign_out: "Выйти"
+  
+  # synonyms
+  synonym_create: "Создать новый синоним"
+  
+  # shits
+  shit_create: "Создать новый концепт"
 
   # validaton errors
   activerecord:
@@ -47,12 +53,12 @@
   page_synonym_show: "Синоним"
   page_synonym_create: "Создание синонима"
   page_synonym_edit: "Редактирование синонима %{name}"
-  prev: "Предыдущий"
-  next: "Следующий" 
+  prev: "Предыдущая"
+  next: "Следующая" 
   views:
     pagination:
-      previous: "&lt; Предыдущий"
-      next: "Следующий &gt;"
-      last: "Последний &gt;&gt;"
-      first: "&lt;&lt;Первый"
+      previous: "&lt; Предыдущая"
+      next: "Следующая &gt;"
+      last: "Последняя &gt;&gt;"
+      first: "&lt;&lt;Первая"
       truncate: "..."

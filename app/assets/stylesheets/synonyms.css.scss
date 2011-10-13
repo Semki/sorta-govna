@@ -1,22 +1,27 @@
 #synonyms-list {
+  
   h1 {
     padding: 15px 0;
     text-align: center;
   }
-  
+
   table {
     text-align: center;
     width: 100%;
+    
+    tr:hover .hideable-images-td img {
+      display: inline;
+    }
+    
+    .hideable-images-td {
+      width: 80px;
+      
+      img {
+        display: none;
+      }
+    }
   }
 }
-
-.hideable-images-td {
-  width: 70px;
-  img {
-    float: left;
-  }
-}
-
 
 #synonym-from-concept-div {
   padding: 5px;
