@@ -17,8 +17,34 @@
 
 #top-shit {
   table {
-    text-align: center;
-    width: 100%;
+    width: 400px;
+    margin: 0 auto;
+    
+    tr {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .shit_it_cell_total {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: right;
+    }
+    
+    .shit_it_cell {
+      width: 21px;
+    }
+    
+    .graph-td {
+      padding-left: 20px;
+      width: 21px;
+    }
+    
+    .graph-icon {
+      height: 21px;
+      width: 21px;
+      margin: auto;
+    }
   }
   
   h1 {

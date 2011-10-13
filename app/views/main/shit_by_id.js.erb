@@ -1,2 +1,2 @@
-var cellname = ".shit_it_cell_total_" + <%=flash[:shitId].to_s%>
+var cellname = "#shit-total-id" + <%=flash[:shitId].to_s%>;
 $(cellname).html("<%= escape_javascript(flash[:total].to_s) %>");
