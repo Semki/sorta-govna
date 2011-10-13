@@ -1,4 +1,4 @@
 var cellname = "#shit-total-id" + <%=flash[:shitId].to_s%>;
-$(cellname).animate( { color: '#C4200A' }, 500);
+$(cellname).animate( { color: '#C4200A' }, 200);
 $(cellname).html("<%= escape_javascript(flash[:total].to_s) %>");
-$(cellname).animate( { color: 'black' }, 500);
+$(cellname).animate( { color: 'black' }, 100);
