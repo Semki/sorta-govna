@@ -3,10 +3,17 @@
 	end
 %>
 
+
 <div id="shitItDiv">
   <%= form_tag :action => "compare" do %>
+	  <div id="inputsCollection">
+			<input type="text" name="name[0]" class="inputClass"  />
+		</div>
+	<input type="button" value=" + " id="addInputButton" />
+<!--
     <%= text_field_tag('name[0]', '', :class => "whatIsShit") %>
 	<%= text_field_tag('name[1]', '', :class => "whatIsShit") %>
+-->
 	<br />
 	<%= submit_tag t(:compare), :action => "compare", :class => 'submitShit' %>
   <% end %> 
