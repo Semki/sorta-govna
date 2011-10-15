@@ -40,6 +40,10 @@ class Shit < ActiveRecord::Base
     self.save
   end
   
+  def few_synonyms?
+    self.synonyms.count < 3
+  end
+  
   private
   
   def create_main_synonym

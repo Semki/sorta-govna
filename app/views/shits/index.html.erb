@@ -6,8 +6,6 @@
   <tr>
     <th>Название</th>
     <th>Описание</th>
-    <th>Есть синонимы?</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -17,10 +15,9 @@
     <td><%= shit.name %></td>
     <td><%= shit.description.to_s.truncate(70) %>
     <td>
-      <span>
-      <%= '✔' unless shit.synonyms.empty? %>
-      <%= '✘' if shit.synonyms.empty? %>
-      </span>
+      <% if shit.few_synonyms? %>
+      <%=  few_synonyms_span %>
+      <% end %>
     </td>
     <td class="hideable-images-td">
       <%= link_to image_tag("show_icon.png", :border=>0), shit %>
