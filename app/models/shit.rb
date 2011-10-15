@@ -1,6 +1,9 @@
 #encoding: utf-8
 class Shit < ActiveRecord::Base
-  has_attached_file :photo
+  has_attached_file :photo,
+                    :url  => "/assets/shits/:id/:style/:basename.:extension",
+                    :path => ":rails_root/public/assets/shits/:id/:style/:basename.:extension"
+
   has_many :synonyms  
   has_many :timelines
   validates :name, :presence => true
