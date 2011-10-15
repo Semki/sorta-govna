@@ -11,15 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015043401) do
+ActiveRecord::Schema.define(:version => 20111015071405) do
 
   create_table "shits", :force => true do |t|
     t.string   "name"
-    t.integer  "total",            :default => 0
+    t.integer  "total",              :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
-    t.boolean  "created_by_guest", :default => false
+    t.boolean  "created_by_guest",   :default => false
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "shits", ["name"], :name => "index_shits_on_name"
