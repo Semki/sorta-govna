@@ -5,6 +5,8 @@ GovnoRf::Application.routes.draw do
 
   root :to => "main#index" 
   
+  match 'info/:shit_id' => 'info#shit_info', :as => :shit_info
+  
   get 'synonyms/autocomplete_synonym_name' => 'synonyms#autocomplete_synonym_name'
     
   resources :synonyms

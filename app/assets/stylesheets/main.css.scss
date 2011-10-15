@@ -24,6 +24,14 @@ div#info {
     width: 400px;
     margin: 0 auto;
     
+    .shit-name-cell {
+      a {
+        color: black;
+        text-decoration: none;
+        border-bottom:1px dotted black;
+      }
+    }
+    
     tr {
       margin: 0;
       padding: 0;
