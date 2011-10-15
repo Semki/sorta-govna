@@ -1,0 +1,39 @@
+<div id='edit-shit-div'>
+<h5>Мы не знаем такого говна. Заполните его описание</h5>
+<%= form_for(@shit) do |f| %>
+  <% if @shit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shit.errors.count, "error") %> prohibited this shit from being saved:</h2>
+
+      <ul>
+      <% @shit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <table style="text-align: left">
+    <tr>
+      <td>Говно</td>
+      <td><%= @shit.name %></td>
+      <%= f.hidden_field :name %>
+	  <%= f.hidden_field :total, :value=>1 %>
+    </tr>
+    <tr>
+      <td>Описание</td>
+      <td><%= f.text_area :description, :class => "descriptionTextField" %></td>
+    </tr>
+    <tr>
+      <td>
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+      <td></td>
+    </tr>
+  </table>
+  </br> 
+  
+<% end %>
+</div>
