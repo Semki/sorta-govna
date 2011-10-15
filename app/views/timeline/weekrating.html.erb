@@ -7,7 +7,7 @@
   </tr>
 <% @timeline.each do |timelineitem| %>
   <tr cols='3'>
-      <td><%= timelineitem.shit_name %></td>
+      <td class="shit-name-cell"><%= link_to timelineitem.shit.name, shit_info_url(:shit_id => timelineitem.shit.id) %></td>
       <td><%= timelineitem.total %></td>
   </tr> 
 <% end %>
