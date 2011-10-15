@@ -18,10 +18,16 @@ class MainController < ApplicationController
       make_notice_about_shitting(Shit.shit_by_id(params[:id]))    
     else
       if params[:autocomplete_synonym]
-        @shit = Shit.new
-        @shit.total = 1
-        @shit.name = params[:autocomplete_synonym]
-        render :action => 'creation_wizard'
+        @shit = Shit.find_by_most_relevant_synonym_or_new(params[:autocomplete_synonym])
+         
+        if @shit.nil?
+          @shit = Shit.new        
+          @shit.total = @shit.total + 1
+          @shit.name = params[:autocomplete_synonym]
+          render :action => 'creation_wizard'
+        else
+           make_notice_about_shitting(Shit.shit_by_id(@shit.id))  
+        end
       end
     end
   end    

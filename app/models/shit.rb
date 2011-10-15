@@ -44,6 +44,12 @@ class Shit < ActiveRecord::Base
     self.synonyms.count < 3
   end
   
+  def self.find_by_most_relevant_synonym_or_new(synonym_name)
+    synonym = Synonym.where("name=?",synonym_name).order("relevance desc").first
+    return synonym.shit unless synonym.nil?
+    nil
+  end
+  
   private
   
   def create_main_synonym
