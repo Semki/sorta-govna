@@ -1,0 +1,24 @@
+#shit-info-div {
+  dl {
+    clear: both;
+  }
+
+  dt {
+    float: left;
+    font-weight: bold;
+    text-align: right;
+    width: 160px;
+  }
+
+  dd {
+    margin-left: 175px;
+  }
+
+  dd p:first-child {
+    margin-top: 0;
+  }
+
+  dd, dt {
+    padding-top: 20px;
+  }
+}
