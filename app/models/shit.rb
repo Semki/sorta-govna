@@ -34,6 +34,11 @@ class Shit < ActiveRecord::Base
     Timeline.add_new_timeline_item(self)
     self
   end
+
+  def update_shit_name
+    self.name = Synonym.select('name').where('shit_id = ?', self.id).order('relevance desc').limit(1).first.name
+    self.save
+  end
   
   private
   

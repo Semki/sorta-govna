@@ -11,7 +11,7 @@ en:
   toplist: "First class"
   week_rating: "Week rating"
   compare: "Compare"
-  top_10_shits: "Top 10 most shitty shits"
+  top_10_shits: "Higher grade of shit"
   name: "Name"
   total: "Total"
   shit_it_more: "Shit it more!"
@@ -23,7 +23,19 @@ en:
   synonyms_editor: "Synonyms"
   name_aka_synonyms: "%{name} a.k.a %{synonyms}"
   prev: "previous"
-  next: "next" 
+  next: "next"
+  
+  # synonyms
+  synonym_create: "Create new synonym"
+  
+  # shits
+  shit_create: "Create new concept"
+  
+  activerecord:
+    errors:
+      full_messages:
+        synonym:
+          doublicate_synonym_error: "We've already have the synonym with same name and shit"
   
   # Заголовки страниц
   # Название начинается с page_

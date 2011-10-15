@@ -7,7 +7,7 @@
   toplist: "Высший сорт"
   week_rating: "Бурление недели"
   compare: "Сравнить"
-  top_10_shits: "10 самых говенных говн"
+  top_10_shits: "Высшие сорта говна"
   name: "Название"
   total: "Счетчик"
   shit_it_more: "Заговнить еще!"
@@ -18,6 +18,22 @@
   shits_editor: "Концепты"
   synonyms_editor: "Синонимы"
   name_aka_synonyms: "%{name}, также известно как %{synonyms}"
+  sign_out: "Выйти"
+  
+  # synonyms
+  synonym_create: "Создать новый синоним"
+  
+  # shits
+  shit_create: "Создать новый концепт"
+
+  # validaton errors
+  activerecord:
+    errors:
+      full_messages:
+        synonym:
+          doublicate_synonym_error: "We've already have the synonym with same name and shit"
+  
+  #doublicate_synonym_error: "Уже есть синоним с таким же названием и таким же говнецом"
   
   # Заголовки страниц
   # Название начинается с page_
@@ -37,12 +53,12 @@
   page_synonym_show: "Синоним"
   page_synonym_create: "Создание синонима"
   page_synonym_edit: "Редактирование синонима %{name}"
-  prev: "Предыдущий"
-  next: "Следующий" 
+  prev: "Предыдущая"
+  next: "Следующая" 
   views:
     pagination:
-      previous: "&lt; Предыдущий"
-      next: "Следующий &gt;"
-      last: "Последний &gt;&gt;"
-      first: "&lt;&lt;Первый"
+      previous: "&lt; Предыдущая"
+      next: "Следующая &gt;"
+      last: "Последняя &gt;&gt;"
+      first: "&lt;&lt;Первая"
       truncate: "..."

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title><%= title %></title>
-  <%= stylesheet_link_tag    "style" %>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "jquery", "application" %>
   <%= javascript_include_tag 'jquery-ui-1.8.16.custom.min.js', 'autocomplete-rails.js', 'rails.js'  %>
@@ -10,24 +10,35 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id='lang'><%= switch_language_link%></div>
-  <div id="navigationDiv">
-    &nbsp
-    <ul class="navigation horizontal">
-      <li><%= link_to t(:sortagovna_ru), root_url, :id => 'logo' %></li>
-      <li><span id="logo">|</span></li>
-      <li><%= link_to t(:compare_shits), compare_url %></li> 
-      <li><%= link_to t(:week_rating), weekrating_url %></li>
-      <li><%= link_to t(:toplist), topshit_url %></li>
-      <li><%= link_to t(:shits_editor), shits_path %></li>
-      <li><%= link_to t(:synonyms_editor), synonyms_path %></li>
-    </ul>
-  </div>  
-  <div id="mainDiv">
+<div id="wrapper">
+  <div id="header">
+    <div id="nav">
+      <ul>
+        <li><%= link_to t(:sortagovna), root_url %></li>
+        <li><%= link_to t(:compare_shits), compare_url %></li>
+        <li><%= link_to t(:week_rating), weekrating_url %></li>
+        <li><%= link_to t(:toplist), topshit_url, :style => 'background-image: none;' %></li>
+        <% if user_signed_in? %>
+          <li><%= link_to t(:shits_editor), shits_path %></li>
+          <li><%= link_to t(:synonyms_editor), synonyms_path %></li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- Пока не нужно
+    <div id="lang">
+      <%= switch_language_link %>
+    </div>
+    -->
+    <% if user_signed_in? %>
+      <%= link_to t(:sign_out), destroy_user_session_path, :method => :delete %>
+    <% end %>
+  </div>
+  <div id="content">
     <%= yield %>
   </div>
-  <div id="footerDiv">
-    &copy; Semki
-  </div>
+</div>
+<div id="footer">
+  <a href="http://semki.biz/" target="_blank">&copy; Semki</a>
+</div>
 </body>
 </html>

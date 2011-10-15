@@ -1,10 +1,12 @@
-<div id="shitItDiv">
+<div id="shit-it">
 <%= form_tag({:action => :shit_it}, :id=> 'shitItForm', :remote => true) do %>
+
     <%= autocomplete_field_tag 'autocomplete_synonym', '', synonyms_autocomplete_synonym_name_path, 
-:update_elements => {:shit_id => '#id'}, :class => "whatIsShit" %>
+:update_elements => {:shit_id => '#id'}, :id => "shit-name" %>
 	<%= hidden_field_tag 'id' %>
 	
-	<%= submit_tag t(:shit), :class => 'submitShit',:disabled=>false %>
+	<%= submit_tag t(:shit), :id => 'submit-shit', :disabled=>false %>
+
 <% end %>
  
   <br /> 
@@ -14,10 +16,9 @@
     <span class="notice_shit_total"></span>
     <span class="notice_officially_shit2"></span>
   </p>
-  
 
   <script type='text/javascript'>
-	$('.submitShit').click(function(e)
+	$('#submit-shit').click(function(e)
 	{
 		e.preventDefault();
 		$('#shitItForm').submit();
@@ -31,9 +32,21 @@
 	}
 
     $('#autocomplete_synonym').bind('railsAutocomplete.select', function(event, data){
-     $('.submitShit').attr('disabled',false);
+     $('#submit-shit').attr('disabled',false);
 	});
   </script>
 
 </div>
+<div id="info">
+    <p>
+			Здесь можно написать о том, какой это <strong>охуенный</strong> сайт, и зачем он кому нужен.
+			Также тут можно написать еще какой-нибудь хуйни.
+		</p>
+		<p>
+			Ну а пока тут будет рыба.
+		</p>
+		<p>
+			In quis nulla quis turpis sodales ultrices in in ipsum. Vestibulum ac nunc tortor. Aliquam eu nibh lectus. Suspendisse ac eros ipsum. Integer ultricies ligula quis diam vehicula blandit. Praesent eget tortor lorem. Nam turpis lacus, facilisis in bibendum non, luctus vel velit. Fusce vitae lacus ac justo consequat egestas. Nullam venenatis laoreet euismod. Morbi a mi leo.
+		</p>
+	</div>
 

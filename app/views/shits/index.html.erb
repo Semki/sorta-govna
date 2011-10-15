@@ -1,3 +1,5 @@
+<div id="shits-list">
+  
 <h1>Список концептов</h1>
 
 <table width="100%">
@@ -11,7 +13,7 @@
   </tr>
 
 <% @shits.each do |shit| %>
- <tr>
+ <tr class="trow">
     <td><%= shit.name %></td>
     <td><%= shit.description.to_s.truncate(70) %>
     <td>
@@ -20,14 +22,17 @@
       <%= '✘' if shit.synonyms.empty? %>
       </span>
     </td>
-    <td><%= link_to 'Посмотреть', shit %></td>
-    <td><%= link_to 'Редактировать', edit_shit_path(shit) %></td>
-    <td><%= link_to 'Удалить', shit, :confirm => 'Уверен?', :method => :delete %></td>
+    <td class="hideable-images-td">
+      <%= link_to image_tag("show_icon.png", :border=>0), shit %>
+      <%= link_to image_tag("edit_icon.png", :border=>0), edit_shit_path(shit) %>
+      <%= link_to image_tag("delete_icon.png", :border=>0), shit, :confirm => 'Уверен?', :method => :delete %>
+    </td>
   </tr>
 <% end %>
-
 </table>
-
 <br />
 <%= paginate @shits %>
-<%= link_to 'Cоздать концепт', new_shit_path %>
+<br />
+<%= link_to t(:shit_create), new_shit_path %>
+
+</div>

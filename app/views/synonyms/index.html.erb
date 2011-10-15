@@ -1,28 +1,30 @@
-<h1>Список синонимов</h1>
+<div id="synonyms-list">
 
-
-<table>
-  <tr>
-    <th>Название</th>
-    <th>Концепт</th>
-	<th>Релевантность</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @synonyms.each do |synonym| %>
-  <tr>
-    <td><%= synonym.name %> </td>
-    <td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
-    <td><%= synonym.relevance %></td>
-	<td><%= link_to 'Show', synonym %></td>
-    <td><%= link_to 'Edit', edit_synonym_path(synonym) %></td>
-    <td><%= link_to 'Destroy', synonym, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-<%= paginate @synonyms %>
-<%= link_to 'New Synonym', new_synonym_path %>
+	<h1>Список синонимов</h1>
+	<table>
+		<tr>
+			<th>Название</th>
+			<th>Концепт</th>
+			<th>Релевантность</th>
+			<th></th>
+		</tr>
+	
+	<% @synonyms.each do |synonym| %>
+		<tr class="trow">
+			<td><%= synonym.name %> </td>
+			<td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
+			<td><%= image_tag("relevance#{synonym.relevance}.png") %></td>
+			<td class="hideable-images-td">
+				<%= link_to image_tag("show_icon.png", :border=>0), synonym %>
+				<%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %>
+				<%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %>
+			</td>
+		</tr>
+	<% end %>
+	</table>
+	
+	<br />
+	<%= paginate @synonyms %>
+	<br />
+	<%= link_to t(:synonym_create), new_synonym_path %>
+</div>

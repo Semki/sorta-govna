@@ -1,19 +1,15 @@
-﻿<h1> <%= t(:week_rating) %> </h1>
-
+﻿<div id="week-rating">
+<h1> <%= t(:week_rating) %> </h1>
 <table >
   <tr>
     <th><%= t(:shit) %></th>
     <th><%= t(:total) %></th>
   </tr>
 <% @timeline.each do |timelineitem| %>
- 
   <tr cols='3'>
       <td><%= timelineitem.shit_name %></td>
       <td><%= timelineitem.total %></td>
-  </tr>
-
- 
+  </tr> 
 <% end %>
 </table>
-
-<br />
+</div>

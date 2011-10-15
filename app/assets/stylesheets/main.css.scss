@@ -1,0 +1,58 @@
+#shit-it {
+  
+  padding-top: 50px;
+  width: 416px;
+  margin: 0 auto;
+  
+  #shit-name {
+    font-size: 20pt;
+    width: 300px;
+  }
+  
+  #submit-shit {
+    font-size: 20pt;
+    padding: 2px 10px 2px 10px;
+  }
+}
+
+div#info {
+    margin: 50px 60px 0px 60px;
+}
+
+#top-shit {
+  table {
+    width: 400px;
+    margin: 0 auto;
+    
+    tr {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .shit_it_cell_total {
+      font-size: 1.2em;
+      font-weight: bold;
+      text-align: right;
+    }
+    
+    .shit_it_cell {
+      width: 21px;
+    }
+    
+    .graph-td {
+      padding-left: 20px;
+      width: 21px;
+    }
+    
+    .graph-icon {
+      height: 21px;
+      width: 21px;
+      margin: auto;
+    }
+  }
+  
+  h1 {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+}
