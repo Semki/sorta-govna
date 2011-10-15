@@ -20,16 +20,11 @@
   <script type='text/javascript'>
 	$('#submit-shit').click(function(e)
 	{
+		if ($("#shitItForm #id").val()=="" && $("#shitItForm #shit-name").val()=="")
 		e.preventDefault();
-		$('#shitItForm').submit();
-	
 	});
 	
-	$("#shitItForm")
-		.bind('ajax:complete', function(){
-			alert("success!");
-		});
-	}
+	
 
     $('#autocomplete_synonym').bind('railsAutocomplete.select', function(event, data){
      $('#submit-shit').attr('disabled',false);

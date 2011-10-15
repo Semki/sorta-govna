@@ -17,6 +17,8 @@ GovnoRf::Application.routes.draw do
 
   match "/shit_by_id" => "main#shit_by_id"
 
+  match "/create_shit" => "main#create_shit", :as => :create_shit
+  
   match "/compare" => "main#compare", :as => :compare
 
   get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'

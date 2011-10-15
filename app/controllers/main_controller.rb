@@ -30,6 +30,14 @@ class MainController < ApplicationController
     make_top_shit_notice_about_shitting(Shit.shit_by_id(params[:id]))
   end
   
+  def create_shit
+    @shit = Shit.new(params[:shit])
+    @shit.created_by_guest = true
+    @shit.save
+    make_notice_about_shitting(@shit)
+    render :action => :shit_it
+  end
+  
   def compare
 		@title = t(:page_compare)
     if params[:name]
