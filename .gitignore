@@ -8,3 +8,4 @@ tmp/
 *.bat
 Gemfile.lock
 nbproject
+public/system/
