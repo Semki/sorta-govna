@@ -82,10 +82,12 @@ class SynonymsController < ApplicationController
     @synonym = Synonym.find(params[:id])
     @synonym.destroy
 
-    respond_to do |format|
-      format.html { redirect_to synonyms_url }
-      format.json { head :ok }
-    end
+    flash[:page] = params[:page];
+    #redirect_to synonyms_path
+    #respond_to do |format|
+     # format.html { redirect_to synonyms_path}
+      #format.json { head :ok }
+    #end
   end    
     
 end

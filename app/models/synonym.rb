@@ -3,6 +3,7 @@ class Synonym < ActiveRecord::Base
   belongs_to :shit
   after_create :update_concept_name
   after_update :update_concept_name
+  after_destroy :update_concept_name
 
   validates :name, :presence => true
   validates :shit_id, :presence => true, :numericality => true

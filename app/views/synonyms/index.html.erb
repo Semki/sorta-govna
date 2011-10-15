@@ -9,17 +9,19 @@
 			<th></th>
 		</tr>
 	
+  <% i=1 %>
 	<% @synonyms.each do |synonym| %>
 		<tr class="trow">
-			<td><%= synonym.name %> </td>
-			<td><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
-			<td><%= image_tag("relevance#{synonym.relevance}.png") %></td>
+			<td id="name_<%=i%>"><%= synonym.name %> </td>
+			<td id="concept_<%=i%>"><%= link_to concept_in_list(synonym.shit), synonym.shit %></td>
+			<td id="relevance_<%=i%>"><%= image_tag("relevance#{synonym.relevance}.png") %></td>
 			<td class="hideable-images-td">
-				<%= link_to image_tag("show_icon.png", :border=>0), synonym %>
-				<%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %>
-				<%= link_to image_tag("delete_icon.png", :border=>0), synonym, confirm: 'Are you sure?', method: :delete %>
+        <span id="show_<%=i%>"><%= link_to image_tag("show_icon.png", :border=>0), synonym %></span>
+        <span id="edit_<%=i%>"><%= link_to image_tag("edit_icon.png", :border=>0), edit_synonym_path(synonym) %></span>
+        <span id="delete_<%=i%>"><%= link_to image_tag("delete_icon.png", :border=>0), synonym, :method=>:delete, :remote => true%></span>
 			</td>
 		</tr>
+    <% i=i+1 %>
 	<% end %>
 	</table>
 	
