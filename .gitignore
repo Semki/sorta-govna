@@ -6,6 +6,7 @@ tmp/
 .redcar/
 *.swp
 *.bat
+*.DS_Store
 Gemfile.lock
 nbproject
 public/system/
