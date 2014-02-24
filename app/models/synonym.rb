@@ -1,9 +1,9 @@
 # coding: utf-8
 class Synonym < ActiveRecord::Base
   belongs_to :shit
-  after_create :update_concept_name
-  after_update :update_concept_name
-  after_destroy :update_concept_name
+  after_create :update_shit_name
+  after_update :update_shit_name
+  after_destroy :update_shit_name
 
   validates :name, :presence => true, uniqueness: {scope: :shit_id}
   validates :shit_id, :presence => true, :numericality => true
@@ -21,7 +21,7 @@ class Synonym < ActiveRecord::Base
   private
 
   # Обновление имени концепта. Вычисляется наиболее релевантный синоним
-  def update_concept_name
+  def update_shit_name
     self.shit.update_shit_name
   end
 end
