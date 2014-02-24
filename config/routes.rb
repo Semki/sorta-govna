@@ -1,95 +1,26 @@
 GovnoRf::Application.routes.draw do
-  
-   
+  # TODO: Make all this shit more RESTful
+
   devise_for :users
 
-  root :to => "main#index" 
-  
-  match 'info/:shit_id' => 'info#shit_info', :as => :shit_info
-  
-  get 'synonyms/autocomplete_synonym_name' => 'synonyms#autocomplete_synonym_name'
-    
-  resources :synonyms
+  root :to => "main#index"
 
+  resources :synonyms
   resources :shits
 
+  get 'info/:shit_id' => 'info#shit_info', :as => :shit_info
+  get 'synonyms/autocomplete_synonym_name' => 'synonyms#autocomplete_synonym_name'
+  get "/topshit" => "main#topshit", :as => :topshit
+
   match 'shit_it' => 'main#shit_it', :as => 'shit_it'
-
-  match "/topshit" => "main#topshit", :as => :topshit
-
-  match "/shit_by_id" => "main#shit_by_id"
+  get "/shit_by_id" => "main#shit_by_id"
 
   match "/create_shit" => "main#create_shit", :as => :create_shit
-  
-  match "/compare" => "main#compare", :as => :compare
-
+  get "/compare" => "main#compare", :as => :compare
   get 'main/autocomplete_shit_name' => 'main#autocomplete_shit_name'
+  get "timeline/index" => "timeline#index"
+  get "timeline/show_by_shit/:shit_id" => "timeline#show_by_shit"
+  get "timeline/show_by_shit_by_week/:shit_id" => "timeline#show_by_shit_by_week", :as => :week_timeline_by_shit
+  get "timeline/weekrating" => "timeline#weekrating", :as => :weekrating
 
-  match "timeline/index" => "timeline#index"
-  
-  match "timeline/show_by_shit/:shit_id" => "timeline#show_by_shit"
-  
-  match "timeline/show_by_shit_by_week/:shit_id" => "timeline#show_by_shit_by_week", :as => :week_timeline_by_shit
-  
-  match "timeline/weekrating" => "timeline#weekrating", :as => :weekrating
-  
-  #match '/main/autocomplete_shit_name' => "main#autocomplete_shit_name"
-  
- 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
-  #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
-
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
-
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
-
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
-
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end
