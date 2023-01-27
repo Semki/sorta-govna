@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.17'
 gem "paperclip", :git => "http://github.com/thoughtbot/paperclip.git"
 
-gem 'devise', '1.4.7'
+gem 'devise', '3.5.10'
 # paginate
 gem 'kaminari'
 

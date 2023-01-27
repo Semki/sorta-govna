@@ -40,9 +40,7 @@ GEM
       multi_json (~> 1.0)
     ansi (1.4.3)
     arel (3.0.3)
-    bcrypt (3.1.6)
-    bcrypt-ruby (3.1.5)
-      bcrypt (>= 3.1.3)
+    bcrypt (3.1.18)
     builder (3.0.4)
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -56,10 +54,13 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     concurrent-ruby (1.1.5)
-    devise (1.4.7)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.0.3)
+    devise (3.5.10)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
     googlecharts (1.6.8)
@@ -79,7 +80,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.14.1)
-    orm_adapter (0.0.7)
+    orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.4.7)
     rack-cache (1.2)
@@ -107,6 +108,8 @@ GEM
       thor (>= 0.14.6, < 2.0)
     rake (13.0.1)
     rdoc (3.9.5)
+    responders (1.1.2)
+      railties (>= 3.2, < 4.2)
     sass (3.2.14)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -119,6 +122,7 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     sqlite3 (1.3.8)
     thor (1.0.1)
+    thread_safe (0.3.6)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -129,7 +133,7 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    warden (1.0.6)
+    warden (1.2.7)
       rack (>= 1.0)
 
 PLATFORMS
@@ -137,7 +141,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails
-  devise (= 1.4.7)
+  devise (= 3.5.10)
   googlecharts
   jquery-rails
   kaminari
